@@ -1,0 +1,2 @@
+class ProjectSkill < ApplicationRecord
+end
