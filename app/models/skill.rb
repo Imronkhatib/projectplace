@@ -5,9 +5,9 @@ class Skill < ApplicationRecord
   has_many :projects, through: :project_skills
 
   def as_json 
-  {
-    name: name,
-    experience: experience
-  }
+    {
+      name: name,
+      experience: experience
+    }
   end
 end

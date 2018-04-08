@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    new_project = Project.new(
+    project = Project.new(
       name: "The Golend Project",
       description: "This is the best project that's ever taken place, some would even say, it's as good as Projectplace.io",
       project_type: "A Web App",
@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
       end_date: "06/01/2018"
     )
 
-    new_project.save
+    project.save
   end
 
   def show
