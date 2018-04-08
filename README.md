@@ -1,5 +1,12 @@
 # README
 
+
+
+<!-- The last thing that I did was create the associations between project_skill and project as well as skill and project throgh project_skills -->
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
