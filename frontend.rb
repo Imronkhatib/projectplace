@@ -42,7 +42,7 @@ require 'Unirest'
 
 # ******************************************************
 
-# Start User Unirest Request
+# Start User  Request
 
 # response = Unirest.get("http://Localhost:3000/users/:id", parameters:{
 #   id: 1
@@ -72,3 +72,9 @@ require 'Unirest'
 #   )
 
 # p response.body
+
+# End User Requests
+# ****************************************************
+
+# Start Skills Requests
+
