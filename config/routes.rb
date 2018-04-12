@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'user_token' => 'user_token#create'
   # Routes for Projects
   get '/projects' => 'projects#index'
   post '/projects' => 'projects#create'
