@@ -1,11 +1,58 @@
 require 'Unirest'
-
 while true
   puts "select from the follow:
         [1] Sign Up
         [2] Log In
-        [3] View User's Skills
-        [4] View User's Projects"
+        [3] View Projects
+        [4] Create a Project"
+
+# ******************************************************
+# Start Project Requests
+
+# response = Unirest.get("http://Localhost:3000/projects/:id", parameters:{
+#   id: 1
+#   }
+#   )
+
+# p response.body
+
+
+# p 'Which project do you want to see'
+
+# the_id = gets.chomp
+
+# # response = Unirest.get("http://Localhost:3000/projects/#{the_id}")
+
+# p response.body
+
+
+
+# p 'Type in the id'
+# id = gets.chomp
+
+# response = Unirest.patch("http://Localhost:3000/projects/#{id}", parameters: {
+#     name: "Projectplace.io",
+#     description: "Haha! It in fact is Projectplace.io, it's an amazing Web App"
+#   }
+#   )
+
+# p response.body
+
+# p "Type in the id of the project you'd like to delete"
+
+# id = gets.chomp
+# response = Unirest.delete("http://Localhost:3000/projects/#{id}")
+
+# p response.body
+
+
+# End Project Requests
+
+# ******************************************************
+
+# Start User  Request
+
+
 
   user_input = gets.chomp.to_i
   if user_input == 1
@@ -26,7 +73,8 @@ while true
     }
   )
     user = response.body
-  end 
+  end
+
   if user_input == 2
     puts "Enter your email"
     user_email = gets.chomp
@@ -43,7 +91,31 @@ while true
 
   # Save the JSON web token from the response
     jwt = response.body["jwt"]
+    # p jwt 
   # Include the jwt in the headers of any future web requests
     Unirest.default_header("Authorization", "Bearer #{jwt}")
   end
+
+  if user_input == 3
+    response = Unirest.get("http://Localhost:3000/projects")
+
+    p response.body
+  end
+
+# response = Unirest.patch("http://Localhost:3000/users/#{id}", parameters: {
+#     first_name: "Mohammad",
+#     last_name: "Ali",
+#     email: "Mohammad.Ali@projectplace.io"
+#   }
+#   )
+
+# p response.body
+
+
+
+# End User Requests
+# ****************************************************
+
+# Start Skills Requests
+
 end

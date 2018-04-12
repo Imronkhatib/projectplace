@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :user_skills
   has_many :skills, through: :user_skills
   has_many :project_users
+  has_many :projects, through: :project_users
 
   def as_json 
     {
