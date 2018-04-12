@@ -102,6 +102,32 @@ while true
     p response.body
   end
 
+  if user_input == 4
+    puts "What is the project's name"
+    project_name = gets.chomp
+    puts "What is the project description"
+    project_description = gets.chomp
+    puts "What kind of project is it?"
+    project_type = gets.chomp
+    puts "When does it start"
+    start_date = gets.chomp
+    puts "when does it end"
+    end_date = gets.chomp
+    response = Unirest.post("http://Localhost:3000/projects", parameters: 
+    {  
+      name: "#{project_name}",
+      description: "#{project_description}",
+      project_type: "#{project_type}",
+      start_date: "#{start_date}",
+      end_date: "#{end_date}"
+      }
+    )
+
+    project = response.body 
+
+  end
+
+
 # response = Unirest.patch("http://Localhost:3000/users/#{id}", parameters: {
 #     first_name: "Mohammad",
 #     last_name: "Ali",
