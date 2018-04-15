@@ -20,7 +20,15 @@ class ProjectsController < ApplicationController
         admin_id: current_user.id
       )
 
+
       project.save
+
+      project_user = ProjectUser.new(
+          user_id: current_user.id,
+          project_id: project.id
+        )
+      
+      project_user.save
     else
       render json: {message: "You must log in"}
     end
