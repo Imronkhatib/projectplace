@@ -16,7 +16,8 @@ class ProjectsController < ApplicationController
         description: params[:description],
         project_type: params[:project_type],
         start_date: params[:start_date],
-        end_date: params[:end_date]
+        end_date: params[:end_date],
+        admin_id: current_user.id
       )
 
       project.save
@@ -34,13 +35,17 @@ class ProjectsController < ApplicationController
 
   def update
     project = Project.find_by(id: params[:id])
-    project.update(
-      name: params[:name],
-      description: params[:description],
-      project_type: params[:project_type],
-      start_date: params[:start_date],
-      end_date: params[:end_date]
-    )
+    if current_user.id == project.admin_id
+      project.update(
+        name: params[:name],
+        description: params[:description],
+        project_type: params[:project_type],
+        start_date: params[:start_date],
+        end_date: params[:end_date]
+      )
+    else
+      render json: {message: "You must be the admin to edit "}
+    end
   end
 
   def delete

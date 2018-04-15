@@ -4,7 +4,8 @@ while true
         [1] Sign Up
         [2] Log In
         [3] View Projects
-        [4] Create a Project"
+        [4] Create a Project
+        [5] Update a Project"
 
 # ******************************************************
 # Start Project Requests
@@ -27,16 +28,7 @@ while true
 
 
 
-# p 'Type in the id'
-# id = gets.chomp
 
-# response = Unirest.patch("http://Localhost:3000/projects/#{id}", parameters: {
-#     name: "Projectplace.io",
-#     description: "Haha! It in fact is Projectplace.io, it's an amazing Web App"
-#   }
-#   )
-
-# p response.body
 
 # p "Type in the id of the project you'd like to delete"
 
@@ -125,6 +117,32 @@ while true
 
     project = response.body 
 
+  end
+
+  if user_input == 5
+    p 'Which project would you like to edit'
+    id = gets.chomp
+    puts "What is the project's name"
+    project_name = gets.chomp
+    puts "What is the project description"
+    project_description = gets.chomp
+    puts "What kind of project is it?"
+    project_type = gets.chomp
+    puts "When does it start"
+    start_date = gets.chomp
+    puts "when does it end"
+    end_date = gets.chomp
+
+    response = Unirest.patch("http://Localhost:3000/projects/#{id}", parameters: {
+        name: "#{project_name}",
+        description: "#{project_description}",
+        project_type: "#{project_type}",
+        start_date: "#{start_date}",
+        end_date: "#{end_date}"
+      }
+      )
+
+    p response.body
   end
 
 
