@@ -7,14 +7,19 @@ var ProfilePage = {
   data: function() {
     return {
       message: "Welcome User!",
-      user: {}
+      user: {},
+      skills: {
+        name: "",
+        experience: ""
+      }
     };
   },
   created: function() {
     axios.get("/users/" + this.$route.params.id).then(function(response) {
-      console.log(response.data);
       this.user = response.data;
+      console.log(response.data);
     }.bind(this));
+
   },
   methods: {},
   computed: {}

@@ -4,10 +4,10 @@ class Skill < ApplicationRecord
   has_many :project_skills
   has_many :projects, through: :project_skills
 
-  def as_json 
-    {
-      name: name,
-      experience: experience
-    }
-  end
+  # def as_json 
+  #   {
+  #     name: name,
+  #     experience: experience
+  #   }
+  # end
 end

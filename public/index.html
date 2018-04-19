@@ -22,8 +22,11 @@
 <template id="profile-page">
   <div class="vue-component">
     <h1>{{message}}</h1>
-    <p>{{user.email}}</p>
     <p>{{user.name}}</p>
+    <p>{{user.email}}</p>
+    <div v-for="skill in user.skills">
+      <p>Skill: {{skill.name}} Experience: {{skill.experience}}</p>
+    </div>
   </div>
 </template>
 

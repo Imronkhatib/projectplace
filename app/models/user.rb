@@ -10,7 +10,10 @@ class User < ApplicationRecord
   def as_json 
     {
       name: name,
-      email: email
+      email: email,
+      skills: skills
     }
   end
+
 end
+
