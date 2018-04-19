@@ -6,10 +6,16 @@ var ProfilePage = {
   template: "#profile-page",
   data: function() {
     return {
-      message: "Welcome User!"
+      message: "Welcome User!",
+      user: {}
     };
   },
-  created: function() {},
+  created: function() {
+    axios.get("/users/" + this.$route.params.id).then(function(response) {
+      console.log(response.data);
+      this.user = response.data;
+    }.bind(this));
+  },
   methods: {},
   computed: {}
 };
@@ -35,7 +41,7 @@ var LoginPage = {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
-          router.push("/");
+          router.push("/profile/:id");
         })
         .catch(
           function(error) {
@@ -85,7 +91,7 @@ var router = new VueRouter({
   routes: [
     { path: "/", component: SignupPage },
     { path: "/login", component: LoginPage },
-    { path: "/profile", component: ProfilePage }
+    { path: "/profile/:id", component: ProfilePage }
   ],
   scrollBehavior: function(to, from, savedPosition) {
     return { x: 0, y: 0 };

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find_by(id: params[:id])
+    user = User.find_by(id: current_user.id)
     render json: user.as_json
   end
 
