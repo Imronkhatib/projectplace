@@ -1,7 +1,15 @@
+*{
+font-family: 'Lato', sans-serif, 'Slabo 27px', serif, 'Open Sans', sans-serif
+  }
+
 body {
   background-color:#f8f8f8;
 }
 
+nav  #center-icon{
+  color:#680612;
+  font-size:25px;
+}
 
 #login h1 {
   color:#2d2d2d;
