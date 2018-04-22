@@ -8,6 +8,7 @@ var ProjectNewPage = {
       name: "",
       projectType: "",
       description: "",
+      skills: "",
       startDate: "",
       endDate: "",
       errors: []
@@ -19,6 +20,7 @@ var ProjectNewPage = {
         name:this.name,
         project_type:this.projectType,
         description:this.description,
+        skills:this.skills,
         start_date:this.startDate,
         end_date:this.endDate,
       };

@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
           project_id: project.id
         )
 
-      skill = Skill.find_by(name:"Ruby")
+      skill = Skill.find_by(name:params[:skills])
       print skill.id
       ProjectSkill.create!(project_id: project.id, skill_id:skill.id)
     else
