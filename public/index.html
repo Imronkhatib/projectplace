@@ -21,28 +21,28 @@
   </head>
   <body>
     <div id="vue-app">
-      <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #189ad3;" id="nav">
+      <nav class="navbar navbar-expand-md navbar-dark">
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#" ><i class="fas fa-user"></i><span class="sr-only">(current)</span>
+                <a class="nav-link" href="#" ><i class="fas fa-user"> Profile</i><span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-comments"></i></a>
+              <a class="nav-link" href="#"><i class="fas fa-comments"> Messages</i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-users"></i></a>
+              <a class="nav-link" href="#"><i class="fas fa-users"> Friends</i></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Create a Project
+                My Projects
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Create New Project</a>
+                <a class="dropdown-item" href="#">New Project</a>
                 <a class="dropdown-item" href="#">Existing Projects</a>
-                <a class="dropdown-item" href="#">Find a Project</a>
+                <a class="dropdown-item" href="#">Join a Project</a>
               </div>
             </li>
           </ul>
@@ -74,6 +74,8 @@
   <div class="vue-component">
     <h1>{{message}}</h1>
     <p>{{user.name}}</p>
+    <p>{{user.user_name}}</p>
+    <p>{{user.bio}}</p>
     <p>{{user.email}}</p>
     <div v-for="skill in user.skills">
       <p>Skill: {{skill.name}} Experience: {{skill.experience}}</p>
@@ -84,7 +86,7 @@
 <template id="login-page">
   <div class="vue-component">
     <div class="container" id="login">
-      <h1>Login</h1>
+      <h1><i class="fab fa-gripfire" id="center-icon"></i></h1>
       <ul>
         <li class="text-danger" v-for="error in errors">{{ error }}</li>
       </ul>

@@ -17,7 +17,7 @@ var ProfilePage = {
   created: function() {
     axios.get("/users/" + this.$route.params.id).then(function(response) {
       this.user = response.data;
-      console.log(response.data);
+      console.log(this.user);
     }.bind(this));
 
   },
