@@ -65,6 +65,9 @@ var SignupPage = {
     return {
       name: "",
       email: "",
+      userName: "",
+      bio: "",
+      skills: "",
       password: "",
       passwordConfirmation: "",
       errors: []
@@ -74,6 +77,9 @@ var SignupPage = {
     submit: function() {
       var params = {
         name: this.name,
+        user_name: this.userName,
+        bio: this.bio,
+        skills: this.skills,
         email: this.email,
         password: this.password,
         password_confirmation: this.passwordConfirmation

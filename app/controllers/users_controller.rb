@@ -13,11 +13,15 @@ class UsersController < ApplicationController
   def create
     user = User.create(
       name: params[:name],
-     email: params[:email],
+      email: params[:email],
+      user_name: params[:user_name],
+      bio: params[:bio],
       password: params[:password],
       password_confirmation: params[:password_confirmation]
     )
     if user.save
+      skill = Skill.find_by(name:params[:skills])
+      UserSkill.create!(user_id:user.id, skill_id:skill.id)
       render json: {message: 'User created successfully'}, status: :created
     else
       render json: {errors: user.errors.full_messages}, status: :bad_request
