@@ -17,10 +17,10 @@ var ProjectNewPage = {
     submit: function() {
       var params = {
         name:this.name,
-        projectType:this.projectType,
+        project_type:this.projectType,
         description:this.description,
-        startDate:this.startDate,
-        endDate:this.endDate,
+        start_date:this.startDate,
+        end_date:this.endDate,
       };
       axios
         .post("/projects", params)

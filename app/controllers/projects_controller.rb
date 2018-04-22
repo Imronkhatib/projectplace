@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
 
   def create
     if current_user
-      project = Project.new(
+      project = Project.create(
         name: params[:name],
         description: params[:description],
         project_type: params[:project_type],
@@ -20,14 +20,15 @@ class ProjectsController < ApplicationController
         admin_id: current_user.id
       )
 
-      project.save
 
-      project_user = ProjectUser.new(
+      project_user = ProjectUser.create(
           user_id: current_user.id,
           project_id: project.id
         )
-      
-      project_user.save
+
+      skill = Skill.find_by(name:"Ruby")
+      print skill.id
+      ProjectSkill.create!(project_id: project.id, skill_id:skill.id)
     else
       render json: {message: "You must log in"}
     end
