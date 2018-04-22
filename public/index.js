@@ -1,6 +1,40 @@
 /* global Vue, VueRouter, axios */
 // homepage is the sign up page
 
+var ProjectNewPage = {
+  template: "#signup-page",
+  data: function() {
+    return {
+      name: "",
+      projectType: "",
+      description: "",
+      startDate: "",
+      endDate: "",
+      errors: []
+    };
+  },
+  methods: {
+    submit: function() {
+      var params = {
+        name:this.name,
+        projectType:this.projectType,
+        description:this.description,
+        startDate:this.startDate,
+        endDate:this.endDate,
+      };
+      axios
+        .post("/projects", params)
+        .then(function(response) {
+          router.push("/profile");
+        })
+        .catch(
+          function(error) {
+            this.errors = error.response.data.errors;
+          }.bind(this)
+        );
+    }
+  }
+};
 
 var ProfilePage = {
   template: "#profile-page",
@@ -24,7 +58,6 @@ var ProfilePage = {
   methods: {},
   computed: {}
 };
-
 
 var LoginPage = {
   template: "#login-page",
@@ -102,7 +135,8 @@ var router = new VueRouter({
   routes: [
     { path: "/signup", component: SignupPage },
     { path: "/login", component: LoginPage },
-    { path: "/profile/:id", component: ProfilePage }
+    { path: "/profile/:id", component: ProfilePage },
+    { path: "/projects/new", component: ProjectNewPage }
   ],
   scrollBehavior: function(to, from, savedPosition) {
     return { x: 0, y: 0 };

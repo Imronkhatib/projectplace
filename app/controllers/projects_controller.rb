@@ -20,7 +20,6 @@ class ProjectsController < ApplicationController
         admin_id: current_user.id
       )
 
-
       project.save
 
       project_user = ProjectUser.new(
