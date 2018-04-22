@@ -38,8 +38,6 @@ class ProjectsController < ApplicationController
     render json: project.as_json
   end
 
-
-
   def update
     project = Project.find_by(id: params[:id])
     if current_user.id == project.admin_id

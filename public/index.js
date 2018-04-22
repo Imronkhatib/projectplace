@@ -25,7 +25,7 @@ var ProjectNewPage = {
       axios
         .post("/projects", params)
         .then(function(response) {
-          router.push("/profile");
+          router.push("/projects");
         })
         .catch(
           function(error) {
@@ -37,28 +37,23 @@ var ProjectNewPage = {
 };
 
 
-// var ProjectsPage = {
-//   template: "#projects-page",
-//   data: function() {
-//     return {
-//       message: "Here are the Projects",
-//       projects: {}
-//       // skills: {
-//       //   name: "",
-//       //   experience: ""
-//       // }
-//     };
-//   },
-//   created: function() {
-//     axios.get("/projects/").then(function(response) {
-//       this.projects = response.data;
-//       console.log(this.projects);
-//     }.bind(this));
+var ProjectsPage = {
+  template: "#projects-page",
+  data: function() {
+    return {
+      projects: []
+    };
+  },
+  created: function() {
+    axios.get("/projects").then(function(response) {
+      this.projects = response.data;
+      console.log(this.projects);
+    }.bind(this));
 
-//   },
-//   methods: {},
-//   computed: {}
-// };
+  },
+  methods: {},
+  computed: {}
+};
 
 var ProfilePage = {
   template: "#profile-page",
@@ -160,7 +155,7 @@ var router = new VueRouter({
     { path: "/signup", component: SignupPage },
     { path: "/login", component: LoginPage },
     { path: "/profile/:id", component: ProfilePage },
-    // { path: "/projects", component: ProjectsPage },
+    { path: "/projects", component: ProjectsPage },
     { path: "/projects/new", component: ProjectNewPage }
   ],
   scrollBehavior: function(to, from, savedPosition) {
