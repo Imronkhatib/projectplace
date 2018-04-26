@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   # Routes for Skills
   get '/skills' => 'skills#index'
   get '/skills/:id' => 'skills#show'
+  # Routes for ProjectUsers
+  get '/project-users' => 'project_users#index'
+  post '/project-users' => 'project_users#create'
 end
