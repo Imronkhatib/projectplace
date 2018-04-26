@@ -1,12 +1,18 @@
 class ProjectsController < ApplicationController
 
-  def index
+  def user_index
     if current_user
       projects = current_user.projects
       render json: projects.as_json 
     else
       render json: {message: "Please log in to view your projects"}
     end
+  end
+
+  def index
+    projects = Project.all
+
+    render json: projects.as_json
   end
 
   def create

@@ -1,6 +1,24 @@
 /* global Vue, VueRouter, axios */
 // homepage is the sign up page
 
+var ProjectsPage = {
+  template: "#projects-page",
+  data: function() {
+    return {
+      projects: []    
+    };
+  },
+  created: function() {
+    axios.get("/projects").then(function(response) {
+      this.projects = response.data;
+      console.log(this.projects);
+    }.bind(this));
+
+  },
+  methods: {},
+  computed: {}
+};
+
 var ProjectNewPage = {
   template: "#projects-new-page",
   data: function() {
@@ -38,16 +56,15 @@ var ProjectNewPage = {
   }
 };
 
-
-var ProjectsPage = {
-  template: "#projects-page",
+var UsersProjectsPage = {
+  template: "#users-projects-page",
   data: function() {
     return {
       projects: []
     };
   },
   created: function() {
-    axios.get("/projects").then(function(response) {
+    axios.get("/users-projects").then(function(response) {
       this.projects = response.data;
       console.log(this.projects);
     }.bind(this));
@@ -157,6 +174,7 @@ var router = new VueRouter({
     { path: "/signup", component: SignupPage },
     { path: "/login", component: LoginPage },
     { path: "/profile/:id", component: ProfilePage },
+    { path: "/users-projects", component: UsersProjectsPage },
     { path: "/projects", component: ProjectsPage },
     { path: "/projects/new", component: ProjectNewPage }
   ],

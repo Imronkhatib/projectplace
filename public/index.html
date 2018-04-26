@@ -41,8 +41,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="/#/projects/new">New Project</a>
-                <a class="dropdown-item" href="/#/projects">Existing Projects</a>
-                <a class="dropdown-item" href="#">Join a Project</a>
+                <a class="dropdown-item" href="/#/users-projects">Existing Projects</a>
+                <a class="dropdown-item" href="/#/projects">Join a Project</a>
               </div>
             </li>
           </ul>
@@ -71,7 +71,18 @@
 </html>
 
 
-
+<template id="projects-page">
+  <div class="vue-component">
+    <div v-for="project in projects">
+    <!-- <h1>{{message}}</h1> -->
+    <p>{{project.name}}</p>
+    <p>{{project.projectType}}</p>
+    <p>{{project.description}}</p>
+    <p>{{project.startDate}}</p>
+    <p>{{project.endDate}}</p>
+    </div>
+  </div>
+</template>
 
 
 <template id="projects-new-page">
@@ -113,7 +124,7 @@
 </template>
 
 
-<template id="projects-page">
+<template id="users-projects-page">
   <div class="vue-component">
     <div v-for="project in projects">
     <!-- <h1>{{message}}</h1> -->

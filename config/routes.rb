@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   post 'user_token' => 'user_token#create'
   # Routes for Projects
+  get '/users-projects' => 'projects#user_index'
   get '/projects' => 'projects#index'
   post '/projects' => 'projects#create'
   get '/projects/:id' => 'projects#show'
@@ -15,6 +16,6 @@ Rails.application.routes.draw do
   get '/skills' => 'skills#index'
   get '/skills/:id' => 'skills#show'
   # Routes for ProjectUsers
-  get '/project-users' => 'project_users#index'
-  post '/project-users' => 'project_users#create'
+  # get '/project-users' => 'project_users#index'
+  # post '/project-users' => 'project_users#create'
 end
