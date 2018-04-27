@@ -76,11 +76,11 @@
     <div v-for="project in projects">
     <!-- <h1>{{message}}</h1> -->
     <p>{{project.name}}</p>
-    <p>{{project.projectType}}</p>
+    <p>{{project.project_type}}</p>
     <p>{{project.description}}</p>
-    <p>{{project.startDate}}</p>
-    <p>{{project.endDate}}</p>
-    </div>
+    <p>{{project.start_date}}</p>
+    <p>{{project.end_date}}</p>
+    <p><button v-on:click="setProject(project)">Join Project</button></p>
   </div>
 </template>
 
@@ -129,10 +129,10 @@
     <div v-for="project in projects">
     <!-- <h1>{{message}}</h1> -->
     <p>{{project.name}}</p>
-    <p>{{project.projectType}}</p>
+    <p>{{project.project_type}}</p>
     <p>{{project.description}}</p>
-    <p>{{project.startDate}}</p>
-    <p>{{project.endDate}}</p>
+    <p>{{project.start_date}}</p>
+    <p>{{project.end_date}}</p>
     </div>
   </div>
 </template>

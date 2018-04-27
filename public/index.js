@@ -5,7 +5,14 @@ var ProjectsPage = {
   template: "#projects-page",
   data: function() {
     return {
-      projects: []    
+      projects: []
+      // currentProject: {
+      //  // name: "",
+      //  // project_type: "",
+      //  // description: "",
+      //  // start_date: "",
+      //  // end_date: ""
+      // }
     };
   },
   created: function() {
@@ -13,9 +20,13 @@ var ProjectsPage = {
       this.projects = response.data;
       console.log(this.projects);
     }.bind(this));
-
   },
-  methods: {},
+  methods: {
+    setProject(project) {
+      this.project = project;
+      console.log(project);
+    }
+  },
   computed: {}
 };
 
