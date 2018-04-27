@@ -24,8 +24,11 @@ var ProjectsPage = {
   methods: {
     setProject(project) {
       this.project = project;
-      console.log(project);
-    }
+      var params = {
+        project_id: project.id
+      };
+      console.log(params)
+axios.post("/project-users", params).then(function(response){router.push("/login");}).catch(function(error){this.errors = error.response.data.errors;}.bind(this));}
   },
   computed: {}
 };

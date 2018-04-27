@@ -12,7 +12,8 @@ class Project < ApplicationRecord
       skills: skills,
       project_type: project_type,
       start_date: start_date,
-      end_date: end_date
+      end_date: end_date, 
+      id: id
     }
   end
 end
