@@ -6,13 +6,6 @@ var ProjectsPage = {
   data: function() {
     return {
       projects: []
-      // currentProject: {
-      //  // name: "",
-      //  // project_type: "",
-      //  // description: "",
-      //  // start_date: "",
-      //  // end_date: ""
-      // }
     };
   },
   created: function() {

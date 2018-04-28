@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#" ><i class="fas fa-user"></i><span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-comments"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-users"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Projects
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/#/projects/new">New Project</a>
+                <a class="dropdown-item" href="/#/users-projects">Existing Projects</a>
+                <a class="dropdown-item" href="/#/projects">Join a Project</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="mx-auto order-0">
+          <a class="navbar-brand mx-auto" href="/#/profile/:id"><i class="fab fa-gripfire" id="center-icon"></i></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="/#/signup" class="btn btn-outline-light">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#/login">Login</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    <router-view></router-view>
+    </div>
+</body>
+</html>
+
+
+<template id="projects-page">
+  <div class="vue-component">
+    <div v-for="project in projects">
+    <!-- <h1>{{message}}</h1> -->
+    <p>{{project.name}}</p>
+    <p>{{project.project_type}}</p>
+    <p>{{project.description}}</p>
+    <p>{{project.start_date}}</p>
+    <p>{{project.end_date}}</p>
+    <p><button v-on:click="setProject(project)">Join Project</button></p>
+  </div>
+</template>
+
+
+<template id="projects-new-page">
+  <div class="vue-component">
+    <div class="container">
+
+
+      <h1>Create a New Project</h1>
+      <ul>
+        <li class="text-danger" v-for="error in errors">{{ error }}</li>
+      </ul>
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" class="form-control" v-model="name">
+      </div>
+      <div class="form-group">
+        <label>Project Type:</label>
+        <input type="text" class="form-control" v-model="projectType">
+      </div>
+      <div class="form-group">
+        <label>Skills:</label>
+        <input type="text" class="form-control" v-model="skills">
+      </div>
+      <div class="form-group">
+        <label>Description:</label>
+        <input type="text" class="form-control" v-model="description">
+      </div>
+      <div class="form-group">
+        <label>Start Date:</label>
+        <input type="text" class="form-control" v-model="startDate">
+      </div>
+      <div class="form-group">
+        <label>End Date:</label>
+        <input type="text" class="form-control" v-model="endDate">
+      </div>
+      <button class="btn btn-primary" v-on:click="submit()">Submit</button>
+    </div>
+  </div>
+</template>
+
+
+<template id="users-projects-page">
+  <div class="vue-component">
+    <div v-for="project in projects">
+    <!-- <h1>{{message}}</h1> -->
+    <p>{{project.name}}</p>
+    <p>{{project.project_type}}</p>
+    <p>{{project.description}}</p>
+    <p>{{project.start_date}}</p>
+    <p>{{project.end_date}}</p>
+    </div>
+  </div>
+</template>
+
+
+<template id="profile-page">
+  <div class="vue-component">
+    <h1>{{message}}</h1>
+    <p>{{user.name}}</p>
+    <p>{{user.user_name}}</p>
+    <p>{{user.bio}}</p>
+    <p>{{user.email}}</p>
+    <div v-for="skill in user.skills">
+      <p>Skill: {{skill.name}} Experience: {{skill.experience}}</p>
+    </div>
+  </div>
+</template>
+
+<template id="login-page">
+  <div class="vue-component">
+    <div class="container" id="login">
+      <h1><i class="fab fa-gripfire" id="center-icon"></i></h1>
+      <ul>
+        <li class="text-danger" v-for="error in errors">{{ error }}</li>
+      </ul>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control" v-model="email">
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" v-model="password" v-on:keyup.enter="submit()">
+      </div>
+      <button class="btn btn-primary" v-on:click="submit()">Sign In</button>
+    </div>
+  </div>
+</template>
+
+<template id="signup-page">
+  <div class="vue-component">
+    <div class="container">
+      <h1>Welcome To Projectplace.io</h1>
+      <ul>
+        <li class="text-danger" v-for="error in errors">{{ error }}</li>
+      </ul>
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" class="form-control" v-model="name">
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control" v-model="email">
+      </div>
+      
+      <div class="form-group">
+        <label>User Name:</label>
+        <input type="text" class="form-control" v-model="userName">
+      </div>
+      <div class="form-group">
+        <label>Bio:</label>
+        <input type="text" class="form-control" v-model="bio">
+      </div>
+      <div class="form-group">
+        <label>Skills:</label>
+        <input type="text" class="form-control" v-model="skills">
+      </div>
+      
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" v-model="password">
+      </div>
+      <div class="form-group">
+        <label>Password confirmation:</label>
+        <input type="password" class="form-control" v-model="passwordConfirmation" v-on:keyup.enter="submit()">
+      </div>
+      <button class="btn btn-primary" v-on:click="submit()">Submit</button>
+    </div>
+  </div>
+</template>
