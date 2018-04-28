@@ -1,6 +1,19 @@
 /* global Vue, VueRouter, axios */
 // homepage is the sign up page
 
+
+var HomePage = {
+  template: "#home-page",
+  data: function() {
+    return {
+      message: "Welcome to Vue.js!"
+    };
+  },
+  created: function() {},
+  methods: {},
+  computed: {}
+};
+
 var ProjectsPage = {
   template: "#projects-page",
   data: function() {
@@ -20,8 +33,13 @@ var ProjectsPage = {
       var params = {
         project_id: project.id
       };
-      console.log(params)
-axios.post("/project-users", params).then(function(response){router.push("/login");}).catch(function(error){this.errors = error.response.data.errors;}.bind(this));}
+      console.log(params);
+      axios.post("/project-users", params).then(function(response) {
+        router.push("/login");
+      }).catch(function(error) {
+        this.errors = error.response.data.errors;
+      }.bind(this));
+    }
   },
   computed: {}
 };
@@ -178,6 +196,7 @@ var SignupPage = {
 
 var router = new VueRouter({
   routes: [
+    { path: "/", component: HomePage },
     { path: "/signup", component: SignupPage },
     { path: "/login", component: LoginPage },
     { path: "/profile/:id", component: ProfilePage },
