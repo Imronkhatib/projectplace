@@ -60,7 +60,7 @@
 				        <li><a href="#"></a></li> <!-- profile settings -->
 								<li class="tr-dropdown"><a href="#">Projects</a>
 									<ul class="tr-dropdown-menu tr-list fadeInUp" role="menu">
-										<li><a href="#">Post A Project</a></li>
+										<li><a href="/#/projects/new">Post A Project</a></li>
 										<li><a href="#">Find Projects</a></li>
 										<!-- <li><a href="view-compnay.html">Project Page</a></li> -->
 										<!-- <li><a href="job-details.html">Project Page</a></li> -->
@@ -98,7 +98,7 @@
 							<li><a href="/#/signup">Register</a></li>
 						</ul><!-- /.sign-in -->					
 
-						<a href="#" class="btn btn-primary">Post Project</a>
+						<a href="/#/projects/new" class="btn btn-primary">Post Project</a>
 					</div><!-- /.nav-right -->
 				</div><!-- /.container -->
 			</nav><!-- /.navbar -->
@@ -197,6 +197,250 @@
   </body>
 </html>	
 
+
+
+
+
+<template id=projects-new-page>
+	<div>
+		<div class="tr-breadcrumb bg-image section-before">
+			<div class="container">
+				<div class="breadcrumb-info text-center">
+					<div class="page-title">
+						<h1>Post Your Job</h1>
+					</div>		
+					<ol class="breadcrumb">
+						<li><a href="index.html">Home</a></li>
+						<li class="active">Job Post</li>
+					</ol>			
+				</div>
+			</div><!-- /.container -->
+		</div><!-- /.tr-breadcrumb -->
+
+		<div class="tr-post-job page-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="short-info code-edit-small">
+							<div class="section">
+								<span class="tr-title">Short Info</span>
+								<div class="row">
+									<div class="col-sm-3">
+										<label>Title for your job</label>
+									</div>
+									<div class="col-sm-9">
+										<div class="code-edit">
+											<span>ex, Human Resource Manager</span>
+										</div>
+									</div>
+								</div><!-- /.row -->
+								<div class="row">
+									<div class="col-sm-3">
+										<label>Job Category</label>
+									</div>
+									<div class="col-sm-9">
+										<div class="dropdown tr-change-dropdown">
+											<a data-toggle="dropdown" href="#" aria-expanded="true"><span class="change-text">Select a category</span><i class="fa fa-angle-down"></i></a>
+											<ul class="dropdown-menu tr-change">
+												<li><a href="#">Select a category</a></li>
+												<li><a href="#">Software Engineer</a></li>
+												<li><a href="#">Project Manager</a></li>
+												<li><a href="#">Graphics Designer</a></li>
+											</ul>								
+										</div><!-- /.dropdown -->
+									</div>
+								</div><!-- /.row -->
+								<div class="row job-category">
+									<div class="col-sm-3">
+										<label>Job Category</label>
+									</div>
+									<div class="col-sm-9">
+										<div class="job-type">
+											<input type="radio" name="radio1" value="full-time" id="full-time"> <label for="full-time">Full Time</label>
+											<input type="radio" name="radio1" value="part-time" id="part-time"> <label for="part-time">Part Time</label>
+											<input type="radio" name="radio1" value="freelance" id="freelance"> <label for="freelance">Freelance</label>	
+											<input type="radio" name="radio1" value="contract" id="contract"> <label for="contract">Contract</label>	
+										</div><!-- /.user-type -->
+									</div>
+								</div><!-- /.row -->
+								<div class="row">
+									<div class="col-sm-3">
+										<label>Job Location</label>
+									</div>
+									<div class="col-sm-9">
+										<div class="code-edit">
+											<span>Type your address</span>
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="dropdown tr-change-dropdown">
+													<a data-toggle="dropdown" href="#" aria-expanded="true"><span class="change-text">City</span><i class="fa fa-angle-down"></i></a>
+													<ul class="dropdown-menu tr-change">
+														<li><a href="#">City</a></li>
+														<li><a href="#">Chicago</a></li>
+														<li><a href="#">Denver</a></li>
+														<li><a href="#">New Orleans</a></li>
+													</ul>								
+												</div><!-- /.dropdown -->		
+											</div>
+											<div class="col-sm-6">
+												<div class="code-edit"><span>Postal Code</span></div>		
+											</div>
+										</div>									
+									</div>
+								</div><!-- /.row -->
+								<div class="row">
+									<div class="col-sm-3">
+										<label>Salary Information</label>
+									</div>
+									<div class="col-sm-9">
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="code-edit">
+													<span>$5000</span>
+												</div>			
+											</div>
+											<div class="col-sm-6">
+												<div class="aegotiable">
+													<span>Or</span>
+													<input type="radio" name="radio2" value="aegotiable" id="aegotiable"> <label for="aegotiable">Negotiable</label>
+												</div>	
+											</div>
+										</div>
+									</div>
+								</div><!-- /.row -->
+								<div class="row">
+									<div class="col-sm-3">
+										<label>Application Deadline</label>
+									</div>
+									<div class="col-sm-9">
+										<div class="calendar">
+										    <input type="date" class="form-control" value="2017-06-25">
+										</div>								
+									</div>
+								</div><!-- /.row -->
+								<div class="row exprience-level">
+									<div class="col-sm-3">
+										<label>Exprience Level</label>
+									</div>
+									<div class="col-sm-9">
+										<div class="exprience">
+											<input type="radio" name="radio3" value="entry-level" id="entry-level"> <label for="entry-level">Entry Level</label>
+											<input type="radio" name="radio3" value="mid-level" id="mid-level"> <label for="mid-level">Mid Level</label>
+											<input type="radio" name="radio3" value="mid-senior" id="mid-senior"> <label for="mid-senior">Mid-Senior Level</label>	
+											<input type="radio" name="radio3" value="top-level" id="top-level"> <label for="top-level">Top Level</label>	
+										</div><!-- /.user-type -->
+									</div>
+								</div><!-- /.row -->
+								<div class="row">
+									<div class="col-sm-3">
+										<label>Job Function</label>
+									</div>
+									<div class="col-sm-9">
+										<div class="dropdown tr-change-dropdown">
+											<a data-toggle="dropdown" href="#" aria-expanded="true"><span class="change-text">Graphics Design</span><i class="fa fa-angle-down"></i></a>
+											<ul class="dropdown-menu tr-change">
+												<li><a href="#">Graphics Design</a></li>
+												<li><a href="#">Project Manager</a></li>
+												<li><a href="#">Software Engineer</a></li>
+											</ul>								
+										</div><!-- /.dropdown -->	
+									</div>
+								</div><!-- /.row -->												
+							</div>
+						</div>
+						<div class="job-description section">
+							<span class="tr-title">Job Description</span>
+							<div class="row">
+								<div class="col-sm-3">
+									<label>Job Summary</label>
+								</div>
+								<div class="col-sm-9">
+									<div class="code-edit">
+										<span>Write few lines about your Job</span>
+									</div>
+									<span class="characters-left">5000 Characters left</span>
+								</div>
+							</div><!-- /.row -->
+							<div class="row">
+								<div class="col-sm-3">
+									<label>Key Responsibilities:</label>
+								</div>
+								<div class="col-sm-9">
+									<div class="code-edit">
+										<span>Write few lines about your Job</span>
+									</div>
+									<span class="characters-left">5000 Characters left</span>
+								</div>
+							</div><!-- /.row -->
+							<div class="row">
+								<div class="col-sm-3">
+									<label>Minimum Requirements:</label>
+								</div>
+								<div class="col-sm-9">
+									<div class="code-edit">
+										<span>Write few lines about your Job</span>
+									</div>
+									<span class="characters-left">5000 Characters left</span>
+								</div>
+							</div><!-- /.row -->						
+						</div><!-- /.job-description -->
+
+						<div class="premium-post section">
+							<span class="tr-title">Make Your Post Premium</span>
+							<p>More replies means more interested buyers. With lots of interested buyers, you have a better chance of selling for the price that you want. <a href="#">Learn more</a></p>
+							<ul class="tr-list">
+								<li>
+									<input type="radio" name="radio4" value="regular-post" id="regular-post">
+									<label for="regular-post">Regular Post</label>
+									<span>$20.00</span>
+								</li>
+								<li>
+									<input type="radio" name="radio4" value="urgent-job" id="urgent-job">
+									<label for="urgent-job">Urgent Job </label>
+									<span>$30.00</span>
+								</li>
+								<li>
+									<input type="radio" name="radio4" value="top-post" id="top-post">
+									<label for="top-post">Top Post for 7 days</label>
+									<span>$50.00</span>
+								</li>
+								<li>
+									<input type="radio" name="radio4" value="daily-bump" id="daily-bump">
+									<label for="daily-bump">Daily Bump Up for 7 days</label>
+									<span>$100.00</span>
+								</li>
+							</ul>
+						</div><!-- /.premium-post -->
+						<div class="section agreement">
+							<label for="send">
+								<input type="checkbox" name="send" id="send">
+								You agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> and acknowledge that you are the rightful owner of this item and using Trade to find a genuine buyer. 
+							</label>
+							<div class="buttons">
+								<a href="#" class="btn btn-primary">Post Your Job</a>
+								<a href="#" class="btn button-cancle">Cancle</a>
+							</div>						
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="section quick-rules">
+							<span class="tr-title">Quick Rules</span>
+							<p>Posting an ad on <a href="#">Seeker.com</a> is free! However, all post must follow our rules:</p>
+							<ul class="tr-list">
+								<li>Make sure you post in the correct category.</li>
+								<li>Do not post the same ad more than once or repost an ad within 48 hours.</li>
+								<li>Do not upload pictures with watermarks.</li>
+								<li>Do not post ads containing multiple items unless it's a package deal.</li>
+								<li>Do not put your email or phone numbers in the title or description.</li>
+							</ul>
+						</div>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.tr-post-job -->
+	</div>	
+</template>
 
 
 <template id="signup-page">
@@ -462,1043 +706,164 @@
 		</div><!-- /.tr-category -->
 
 
+			<div class="tr-job-posted section-padding">
+				<div class="container">
+					<div class="section-title">
+						<h1>Jobs you may be interested in</h1>
+					</div>
+					<div class="job-tab">
+						<ul class="nav nav-tabs text-center" role="tablist">
+							<li role="presentation" class="active"><a href="#hot-jobs" aria-controls="hot-jobs" role="tab" data-toggle="tab">Hot Jobs</a></li>
+							<li role="presentation"><a href="#recent-jobs" aria-controls="recent-jobs" role="tab" data-toggle="tab">Recent Jobs</a></li>
+							<li role="presentation"><a href="#popular-jobs" aria-controls="popular-jobs" role="tab" data-toggle="tab">Popular Jobs</a></li>
+						</ul>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active" id="hot-jobs">
+								<template>
+								<div class="row">
+									<div class="col-sm-6 col-md-3">
+										<div class="job-item">
+											<div class="item-overlay">
+												<div class="job-info">
+													<a href="#" class="btn btn-primary">Full Time</a>
+													<span class="tr-title">
+														<a href="job-details.html">Project Manager</a>
+														<span><a href="#">Dig File</a></span>
+													</span>
+													<ul class="tr-list job-meta">
+														<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
+														<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
+														<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
+													</ul>
+													<ul class="job-social tr-list">
+														<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
+														<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+													</ul>
+												</div>										
+											</div>
+											<div class="job-info">
+												<div class="company-logo">
+													<img src="images/job/1.png" alt="images" class="img-responsive">
+												</div>
+												<span class="tr-title">
+													<a href="#">Project Manager</a>
+													<span><a href="#">Dig File</a></span>
+												</span>
+												<ul class="tr-list job-meta">
+													<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+													<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+													<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+												</ul>
+												<div class="time">
+													<a href="#"><span>Full Time</span></a>
+													<span class="pull-right">Posted 23 hours ago</span>
+												</div>																				
+											</div>
+										</div>
+									</div>
 
-		<div class="tr-job-posted section-padding">
-			<div class="container">
-				<div class="section-title">
-					<h1>Jobs you may be interested in</h1>
-				</div>
-				<div class="job-tab">
-					<ul class="nav nav-tabs text-center" role="tablist">
-						<li role="presentation" class="active"><a href="#hot-jobs" aria-controls="hot-jobs" role="tab" data-toggle="tab">Hot Jobs</a></li>
-						<li role="presentation"><a href="#recent-jobs" aria-controls="recent-jobs" role="tab" data-toggle="tab">Recent Jobs</a></li>
-						<li role="presentation"><a href="#popular-jobs" aria-controls="popular-jobs" role="tab" data-toggle="tab">Popular Jobs</a></li>
-					</ul>
-					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane fade in active" id="hot-jobs">
-							<div class="row">
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
+								</div><!-- /.row -->
+							</div><!-- /.tab-pane -->
+							<div role="tabpanel" class="tab-pane fade in" id="recent-jobs">
+								<div class="row">
+									<div class="col-sm-6 col-md-3">
+										<div class="job-item">
+											<div class="item-overlay">
+												<div class="job-info">
+													<a href="#" class="btn btn-primary">Part Time</a>
+													<span class="tr-title">
+														<a href="job-details.html">Design Associate</a>
+														<span><a href="#">Loop</a></span>
+													</span>
+													<ul class="tr-list job-meta">
+														<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
+														<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
+														<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
+													</ul>
+													<ul class="job-social tr-list">
+														<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
+														<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+													</ul>
+												</div>										
+											</div>								
 											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
+												<div class="company-logo">
+													<img src="images/job/2.png" alt="images" class="img-responsive">
+												</div>
 												<span class="tr-title">
-													<a href="job-details.html">Project Manager</a>
-													<span><a href="#">Dig File</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/1.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Project Manager</a>
-												<span><a href="#">Dig File</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted 23 hours ago</span>
-											</div>																				
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Part Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Associate</a>
+													<a href="#">Design Associate</a>
 													<span><a href="#">Loop</a></span>
 												</span>
 												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
+													<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+													<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+													<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
 												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/2.png" alt="images" class="img-responsive">
+												<div class="time">
+													<a href="#"><span class="part-time">Part Time</span></a>
+													<span class="pull-right">Posted 1 day ago</span>
+												</div>				
 											</div>
-											<span class="tr-title">
-												<a href="#">Design Associate</a>
-												<span><a href="#">Loop</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="part-time">Part Time</span></a>
-												<span class="pull-right">Posted 1 day ago</span>
-											</div>			
 										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
+									</div>						
+
+								</div><!-- /.row -->	
+							</div><!-- /.tab-pane -->
+							<div role="tabpanel" class="tab-pane fade in" id="popular-jobs">
+								<div class="row">
+									<div class="col-sm-6 col-md-3">
+										<div class="job-item">
+											<div class="item-overlay">
+												<div class="job-info">
+													<a href="#" class="btn btn-primary">Full Time</a>
+													<span class="tr-title">
+														<a href="job-details.html">Graphic Designer</a>
+														<span><a href="#">Fox</a></span>
+													</span>
+													<ul class="tr-list job-meta">
+														<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
+														<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
+														<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
+													</ul>
+													<ul class="job-social tr-list">
+														<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
+														<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+													</ul>
+												</div>										
+											</div>								
 											<div class="job-info">
-												<a href="#" class="btn btn-primary">Freelance</a>
+												<div class="company-logo">
+													<img src="images/job/7.png" alt="images" class="img-responsive">
+												</div>
 												<span class="tr-title">
-													<a href="job-details.html">Graphic Designer</a>
-													<span><a href="#">Humanity Creative</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/3.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Graphic Designer</a>
-												<span><a href="#">Humanity Creative</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="freelance">Freelance</span></a>
-												<span class="pull-right">Posted 10 day ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Consultant</a>
-													<span><a href="#">Families</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/4.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Consultant</a>
-												<span><a href="#">Families</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted Oct 09, 2017</span>
-											</div>				
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Part Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Project Manager</a>
-													<span><a href="#">Sky Creative</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/5.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Project Manager</a>
-												<span><a href="#">Sky Creative</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>	
-											<div class="time">
-												<a href="#"><span class="part-time">Part Time</span></a>
-												<span class="pull-right">Posted 1 day ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Freelance</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Associate</a>
-													<span><a href="#">Pencil</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/6.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Associate</a>
-												<span><a href="#">Pencil</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="freelance">Freelance</span></a>
-												<span class="pull-right">Posted 23 hours ago</span>
-											</div>				
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Graphic Designer</a>
+													<a href="#">Graphic Designer</a>
 													<span><a href="#">Fox</a></span>
 												</span>
 												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/7.png" alt="images" class="img-responsive">
+													<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+													<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+													<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+												</ul>	
+												<div class="time">
+													<a href="#"><span>Full Time</span></a>
+													<span class="pull-right">Posted Oct 09, 2017</span>
+												</div>			
 											</div>
-											<span class="tr-title">
-												<a href="#">Graphic Designer</a>
-												<span><a href="#">Fox</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted Oct 09, 2017</span>
-											</div>				
 										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#"><span class="btn btn-primary">Part Time</span></a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Consultant</a>
-													<span><a href="#">Owl</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/8.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Consultant</a>
-												<span><a href="#">Owl</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="part-time">Part Time</span></a>
-												<span class="pull-right">Posted 10 day ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>
-							</div><!-- /.row -->
-						</div><!-- /.tab-pane -->
-						<div role="tabpanel" class="tab-pane fade in" id="recent-jobs">
-							<div class="row">
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Part Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Associate</a>
-													<span><a href="#">Loop</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/2.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Associate</a>
-												<span><a href="#">Loop</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="part-time">Part Time</span></a>
-												<span class="pull-right">Posted 1 day ago</span>
-											</div>				
-										</div>
-									</div>
-								</div>						
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Project Manager</a>
-													<span><a href="#">Dig File</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/1.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Project Manager</a>
-												<span><a href="#">Dig File</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted 23 hours ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Part Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Consultant</a>
-													<span><a href="#">Families</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/4.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Consultant</a>
-												<span><a href="#">Families</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="part-time">Part Time</span></a>
-												<span class="pull-right">Posted Oct 09, 2017</span>
-											</div>				
-										</div>
-									</div>
-								</div>							
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Freelance</a>
-												<span class="tr-title">
-													<a href="job-details.html">Graphic Designer</a>
-													<span><a href="#">Humanity Creative</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/3.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Graphic Designer</a>
-												<span><a href="#">Humanity Creative</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="freelance">Freelance</span></a>
-												<span class="pull-right">Posted 10 day ago</span>
-											</div>				
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Associate</a>
-													<span><a href="#">Pencil</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/6.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Associate</a>
-												<span><a href="#">Pencil</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>	
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted 23 hours ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>							
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Freelance</a>
-												<span class="tr-title">
-													<a href="job-details.html">Project Manager</a>
-													<span><a href="#">Sky Creative</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/5.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Project Manager</a>
-												<span><a href="#">Sky Creative</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="freelance">Freelance</span></a>
-												<span class="pull-right">Posted 1 day ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Part Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Consultant</a>
-													<span><a href="#">Owl</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/8.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Consultant</a>
-												<span><a href="#">Owl</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="part-time">Part Time</span></a>
-												<span class="pull-right">Posted 10 day ago</span>
-											</div>				
-										</div>
-									</div>
-								</div>							
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Graphic Designer</a>
-													<span><a href="#">Fox</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/7.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Graphic Designer</a>
-												<span><a href="#">Fox</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted Oct 09, 2017</span>
-											</div>				
-										</div>
-									</div>
-								</div>
-							</div><!-- /.row -->	
-						</div><!-- /.tab-pane -->
-						<div role="tabpanel" class="tab-pane fade in" id="popular-jobs">
-							<div class="row">
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Graphic Designer</a>
-													<span><a href="#">Fox</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/7.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Graphic Designer</a>
-												<span><a href="#">Fox</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>	
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted Oct 09, 2017</span>
-											</div>			
-										</div>
-									</div>
-								</div>						
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Part Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Associate</a>
-													<span><a href="#">Loop</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/2.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Associate</a>
-												<span><a href="#">Loop</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="part-time">Part Time</span></a>
-												<span class="pull-right">Posted 1 day ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>						
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Project Manager</a>
-													<span><a href="#">Dig File</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/1.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Project Manager</a>
-												<span><a href="#">Dig File</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted 23 hours ago</span>
-											</div>				
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Freelance</a>
-												<span class="tr-title">
-													<a href="job-details.html">Graphic Designer</a>
-													<span><a href="#">Humanity Creative</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/3.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Graphic Designer</a>
-												<span><a href="#">Humanity Creative</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="freelance">Freelance</span></a>
-												<span class="pull-right">Posted 10 day ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>							
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Consultant</a>
-													<span><a href="#">Families</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/4.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Consultant</a>
-												<span><a href="#">Families</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted Oct 09, 2017</span>
-											</div>			
-										</div>
-									</div>
-								</div>							
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Freelance</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Associate</a>
-													<span><a href="#">Pencil</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/6.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Associate</a>
-												<span><a href="#">Pencil</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>	
-											<div class="time">
-												<a href="#"><span class="freelance">Freelance</span></a>
-												<span class="pull-right">Posted 23 hours ago</span>
-											</div>		
-										</div>
-									</div>
-								</div>	
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Part Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Design Consultant</a>
-													<span><a href="#">Owl</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/8.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Design Consultant</a>
-												<span><a href="#">Owl</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span class="part-time">Part Time</span></a>
-												<span class="pull-right">Posted 10 day ago</span>
-											</div>			
-										</div>
-									</div>
-								</div>														
-								<div class="col-sm-6 col-md-3">
-									<div class="job-item">
-										<div class="item-overlay">
-											<div class="job-info">
-												<a href="#" class="btn btn-primary">Full Time</a>
-												<span class="tr-title">
-													<a href="job-details.html">Project Manager</a>
-													<span><a href="#">Sky Creative</a></span>
-												</span>
-												<ul class="tr-list job-meta">
-													<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-													<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-													<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
-												</ul>
-												<ul class="job-social tr-list">
-													<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-													<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>								
-										<div class="job-info">
-											<div class="company-logo">
-												<img src="images/job/5.png" alt="images" class="img-responsive">
-											</div>
-											<span class="tr-title">
-												<a href="#">Project Manager</a>
-												<span><a href="#">Sky Creative</a></span>
-											</span>
-											<ul class="tr-list job-meta">
-												<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-											</ul>
-											<div class="time">
-												<a href="#"><span>Full Time</span></a>
-												<span class="pull-right">Posted 1 day ago</span>
-											</div>				
-										</div>
-									</div>
-								</div>
-							</div><!-- /.row -->	
-						</div><!-- /.tab-pane -->
-					</div>				
-				</div><!-- /.job-tab -->			
-			</div><!-- /.container -->
-		</div><!-- /.tr-job-posted -->
+									</div>						
+								</div><!-- /.row -->	
+							</div><!-- /.tab-pane -->
+						</div>				
+					</div><!-- /.job-tab -->			
+				</div><!-- /.container -->
+			</div><!-- /.tr-job-posted -->
+
 
 		<div class="tr-steps bg-image section-padding section-before">
 			<div class="container">
