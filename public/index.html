@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/slick.css">  
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 	
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -228,8 +229,8 @@
 										<label>Title for your Project</label>
 									</div>
 									<div class="col-sm-9">
-										<div class="code-edit">
-											<span></span>
+										<div>
+											<input type="text" v-model="name" id="project-box">
 										</div>
 									</div>
 								</div><!-- /.row -->
@@ -255,8 +256,8 @@
 									<div class="col-sm-9">
 										<div class="row">
 											<div class="col-sm-6">
-												<div class="code-edit">
-													<span>$5000</span>
+												<div>
+													<input type="text"  id="project-box">
 												</div>			
 											</div>
 											<div class="col-sm-6">
