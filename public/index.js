@@ -49,7 +49,7 @@ var ProjectNewPage = {
   data: function() {
     return {
       name: "",
-      projectType: "",
+      projectType: "A working type",
       description: "",
       skills: "",
       startDate: "",
