@@ -14,6 +14,28 @@ var HomePage = {
   computed: {}
 };
 
+var ProjectShowPage = {
+  template: "#project-show-page",
+  data: function() {
+    return {
+      project: {},
+      skill: { 
+        name: "",
+        experience: ""
+      }
+    };
+  },
+  created: function() {
+    axios.get("/projects/" + this.$route.params.id).then(function(response) {
+      this.project = response.data;
+      console.log(this.project);
+    }.bind(this));
+
+  },
+  methods: {},
+  computed: {}
+};
+
 var ProjectsPage = {
   template: "#projects-page",
   data: function() {
@@ -121,6 +143,7 @@ var ProfilePage = {
   methods: {},
   computed: {}
 };
+  
 
 var LoginPage = {
   template: "#login-page",
@@ -202,7 +225,8 @@ var router = new VueRouter({
     { path: "/profile/:id", component: ProfilePage },
     { path: "/users-projects", component: UsersProjectsPage },
     { path: "/projects", component: ProjectsPage },
-    { path: "/projects/new", component: ProjectNewPage }
+    { path: "/projects/new", component: ProjectNewPage },
+    { path: "/projects/:id", component: ProjectShowPage }
   ],
   scrollBehavior: function(to, from, savedPosition) {
     return { x: 0, y: 0 };
