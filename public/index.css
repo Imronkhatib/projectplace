@@ -5,8 +5,46 @@
   width: 100%;
   margin-bottom: 15px;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 14px;
   background-color: rgb(250, 247, 250);
   border: 1px solid rgb(232, 230, 232);
   border-radius: 4px; 
 }
+
+#project-box-large
+{
+  color: rgb(45, 48, 56);
+  height: auto;
+  width: 100%;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  padding:14px 14px 250px 14px;
+  background-color: rgb(250, 247, 250);
+  border: 1px solid rgb(232, 230, 232);
+  border-radius: 4px; 
+}
+
+#project-dropdown-box
+{
+  position:relative;
+  color: rgb(45, 48, 56);
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px; 
+  box-sizing: border-box;
+  padding: 12px 20px;
+  background-color: rgb(250, 247, 250);
+  border: 1px solid rgb(232, 230, 232);
+  border-radius: 4px; 
+}
+
+/*#project-dropdown-box
+{
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap
+}*/

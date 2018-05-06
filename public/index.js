@@ -51,7 +51,7 @@ var ProjectNewPage = {
       name: "",
       projectType: "",
       description: "",
-      skills: "",
+      skills:"",
       startDate: "",
       endDate: "",
       errors: []
@@ -211,7 +211,12 @@ var router = new VueRouter({
 
 var app = new Vue({
   el: "#vue-app",
-  router: router
+  router: router,
+  created: function() {
+    var jwt = localStorage.getItem("jwt");
+    if (jwt) {
+      axios.defaults.headers.common["Authorization"] = jwt;
+    }
+  }
 });
-
 

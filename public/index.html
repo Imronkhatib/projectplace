@@ -230,7 +230,7 @@
 									</div>
 									<div class="col-sm-9">
 										<div>
-											<input type="text" v-model="name" id="project-box">
+											<input type="text" v-model="name" placeholder="I.e: Develope an App" id="project-box">
 										</div>
 									</div>
 								</div><!-- /.row -->
@@ -239,14 +239,14 @@
 										<label>Project Category</label>
 									</div>
 									<div class="col-sm-9">
-										<div class="dropdown tr-change-dropdown">
-											<a data-toggle="dropdown" href="#" aria-expanded="true"><span class="change-text">Select a category</span><i class="fa fa-angle-down"></i></a>
-											<ul class="dropdown-menu tr-change">
-												<li><a href="#">Videogame Making</a></li>
-												<li><a href="#">Web Development</a></li>
-												<li><a href="#">Movie Making</a></li>
-											</ul>								
-										</div><!-- /.dropdown -->
+										<div>
+											<select v-model="projectType" id="project-dropdown-box">
+												  <option disabled value="">Please select one</option>
+												  <option>A</option>
+												  <option>B</option>
+												  <option>C</option>
+											</select>
+										</div><!-- /.dropdown --><!-- /.dropdown -->
 									</div>
 								</div><!-- /.row -->
 								<div class="row">
@@ -256,8 +256,8 @@
 									<div class="col-sm-9">
 										<div class="row">
 											<div class="col-sm-6">
-												<div>
-													<input type="text"  id="project-box">
+												<div class="code-edit">
+													<span>$5000</span>
 												</div>			
 											</div>
 											<div class="col-sm-6">
@@ -275,7 +275,7 @@
 									</div>
 									<div class="col-sm-9">
 										<div class="calendar">
-										    <input type="date" class="form-control" value="2017-06-25">
+										    <input type="date" class="form-control" value="2017-06-25" v-model="endDate">
 										</div>								
 									</div>
 								</div><!-- /.row -->		
@@ -284,13 +284,13 @@
 										<label>Skill Needed</label>
 									</div>
 									<div class="col-sm-9">
-										<div class="dropdown tr-change-dropdown">
-											<a data-toggle="dropdown" href="#" aria-expanded="true"><span class="change-text">Graphics Design</span><i class="fa fa-angle-down"></i></a>
-											<ul class="dropdown-menu tr-change">
-												<li><a href="#">Graphics Design</a></li>
-												<li><a href="#">Project Manager</a></li>
-												<li><a href="#">Software Engineer</a></li>
-											</ul>								
+										<div>
+											<select v-model="skills" id="project-dropdown-box">
+												  <option disabled value="">Please select one</option>
+												  <option>Ruby</option>
+												  <option>B</option>
+												  <option>C#</option>
+											</select>
 										</div><!-- /.dropdown -->	
 									</div>
 								</div><!-- /.row -->
@@ -316,8 +316,8 @@
 									<label>Project Summary</label>
 								</div>
 								<div class="col-sm-9">
-									<div class="code-edit">
-										<span>Write few lines about your Project</span>
+									<div>
+										<input type="text" placeholder="Write a summary about your project." id="project-box-large" v-model="description">
 									</div>
 									<span class="characters-left">5000 Characters left</span>
 								</div>
@@ -351,7 +351,7 @@
 								You agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> and acknowledge that you are the rightful owner of this item and using Trade to find a genuine buyer. 
 							</label>
 							<div class="buttons">
-								<a href="#" class="btn btn-primary">Post Your Job</a>
+								<a href="#" class="btn btn-primary" v-on:click="submit()">Post Your Project</a>
 								<a href="#" class="btn button-cancle">Cancle</a>
 							</div>						
 						</div>

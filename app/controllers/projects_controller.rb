@@ -10,14 +10,18 @@ class ProjectsController < ApplicationController
   end
 
   def index
+    p "*" * 50
+    p current_user
+    p "*" * 50
     projects = Project.all
 
     render json: projects.as_json
   end
 
+
   def create
     if current_user
-      project = Project.create(
+      project = Project.create!(
         name: params[:name],
         description: params[:description],
         project_type: params[:project_type],
@@ -27,7 +31,7 @@ class ProjectsController < ApplicationController
       )
 
 
-      project_user = ProjectUser.create(
+      project_user = ProjectUser.create!(
           user_id: current_user.id,
           project_id: project.id
         )
