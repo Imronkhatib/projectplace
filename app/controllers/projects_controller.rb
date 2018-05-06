@@ -27,6 +27,9 @@ class ProjectsController < ApplicationController
         project_type: params[:project_type],
         start_date: params[:start_date],
         end_date: params[:end_date],
+        key_responsibilities: params[:key_responsibilities],
+        minimum_requirements: params[:minimum_requirements],
+        budget: params[:budget],
         admin_id: current_user.id
       )
 

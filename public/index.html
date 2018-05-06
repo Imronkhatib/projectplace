@@ -1701,7 +1701,7 @@
 											<div class="col-sm-6">
 												<div class="aegotiable">
 													<span>Or</span>
-													<input type="radio" name="radio2" value="aegotiable" id="aegotiable"> <label for="aegotiable">Unknown</label>
+													<input type="radio" name="radio2" value="aegotiable" id="aegotiable" v-model="budget"> <label for="aegotiable">Unknown</label>
 												</div>	
 											</div>
 										</div>
@@ -1765,22 +1765,18 @@
 									<label>Applicant Key Responsibilities:</label>
 								</div>
 								<div class="col-sm-9">
-									<div class="code-edit">
-										<span>What do you need help with?</span>
+									<div>
+										<input type="text" placeholder="What do you need help with?" id="project-box-large" v-model="keyResponsibilities">
 									</div>
-									<span class="characters-left">5000 Characters left</span>
-								</div>
 							</div><!-- /.row -->
 							<div class="row">
 								<div class="col-sm-3">
 									<label>Minimum Requirements:</label>
 								</div>
 								<div class="col-sm-9">
-									<div class="code-edit">
-										<span>What does an applicant need to be able to do?</span>
+									<div>
+										<input type="text" placeholder="What does an applicant need to be able to do?" id="project-box-large" v-model="minimumRequirements">
 									</div>
-									<span class="characters-left">5000 Characters left</span>
-								</div>
 							</div><!-- /.row -->						
 						</div><!-- /.job-description -->
 						<div class="section agreement">
