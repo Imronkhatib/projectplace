@@ -32,7 +32,20 @@ var ProjectShowPage = {
     }.bind(this));
 
   },
-  methods: {},
+  methods: {
+    setProject(project) {
+      this.project = project;
+      var params = {
+        project_id: project.id
+      };
+      console.log(params);
+      axios.post("/project-users", params).then(function(response) {
+        router.push("/login");
+      }).catch(function(error) {
+        this.errors = error.response.data.errors;
+      }.bind(this));
+    }
+  },
   computed: {}
 };
 
@@ -50,18 +63,6 @@ var ProjectsPage = {
     }.bind(this));
   },
   methods: {
-    setProject(project) {
-      this.project = project;
-      var params = {
-        project_id: project.id
-      };
-      console.log(params);
-      axios.post("/project-users", params).then(function(response) {
-        router.push("/login");
-      }).catch(function(error) {
-        this.errors = error.response.data.errors;
-      }.bind(this));
-    }
   },
   computed: {}
 };

@@ -213,12 +213,12 @@
 						<h1>{{project.name}}</h1>
 					</div>
 					<ul class="tr-list job-meta list-inline">
-						<!-- <li><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</li> -->
+						<li><i class="fa fa-money" aria-hidden="true"></i>{{project.budget}}</li>
 						<li><i class="fa fa-tags" aria-hidden="true"></i>{{project.project_type}}</li>
 						<li><i class="fa fa-hourglass-start" aria-hidden="true"></i>Project Deadline : {{ project.end_date }}</li>
 					</ul>	
 					<div class="buttons">
-						<a href="#" class="btn btn-primary"><i class="fa fa-briefcase" aria-hidden="true"></i>Apply For This Project</a>
+						<a class="btn btn-primary"><i class="fa fa-briefcase" aria-hidden="true" v-on:click="setProject(project)"></i>Apply For This Project</a>
 						<!-- <a href="#" class="btn button-bookmark"><i class="fa fa-bookmark" aria-hidden="true"></i>Bookmark</a> -->
 						<span class="btn button-share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share <span><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></span></span>
 					</div>		
@@ -234,8 +234,9 @@
 							<span class="tr-title">Project Summary</span>
 							<p> {{ project.description }} </p> <br>
 							<span>Key Responsibilities:</span>
-							<p>Execute all visual design stages of website design from concept to final hand-off to development Create print advertisements, social media advertisements, client collateral & digital resizes according to Client demands With direction of the Creative team, input into new design ideas for client branding Update & keep all agency collateral materials, including keeping records of Client's logos, fonts, images, etc. </p>
+							<p> {{project.key_responsibilities}} </p>
 							<span>Minimum Requirements</span>
+							<p>{{project.minimum_requirements}}</p>
 							<span>Needed Skills</span>
 							<div v-for="skill in project.skills">
 							<ul class="tr-list">
@@ -1762,22 +1763,26 @@
 							</div><!-- /.row -->
 							<div class="row">
 								<div class="col-sm-3">
-									<label>Applicant Key Responsibilities:</label>
+									<label>Key Responsibilities</label>
 								</div>
 								<div class="col-sm-9">
 									<div>
-										<input type="text" placeholder="What do you need help with?" id="project-box-large" v-model="keyResponsibilities">
+										<input type="text" placeholder="What do you need help with on your project?" id="project-box-large" v-model="keyResponsibilities">
 									</div>
+									<span class="characters-left">5000 Characters left</span>
+								</div>
 							</div><!-- /.row -->
 							<div class="row">
 								<div class="col-sm-3">
-									<label>Minimum Requirements:</label>
+									<label>Minimum Requirements</label>
 								</div>
 								<div class="col-sm-9">
 									<div>
-										<input type="text" placeholder="What does an applicant need to be able to do?" id="project-box-large" v-model="minimumRequirements">
+										<input type="text" placeholder="What does a good candidate need to be able to do?" id="project-box-large" v-model="minimumRequirements">
 									</div>
-							</div><!-- /.row -->						
+									<span class="characters-left">5000 Characters left</span>
+								</div>
+							</div><!-- /.row -->					
 						</div><!-- /.job-description -->
 						<div class="section agreement">
 							<label for="send">
