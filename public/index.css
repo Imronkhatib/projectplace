@@ -38,13 +38,8 @@
   border-radius: 4px; 
 }
 
-/*#project-dropdown-box
-{
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: 400;
-  line-height: 1.42857143;
-  color: #333;
-  white-space: nowrap
-}*/
+#primary-btn {
+  font-size:15px;
+  background-color:white;
+  opacity:50%;
+}
