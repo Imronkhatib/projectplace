@@ -49,25 +49,25 @@
 }
 
 
-#user-project-header {
+#project-header {
   padding-bottom:20px;
 }
 
-#user-project-col {
+#project-col {
   height:440px;
 
 }
 
-#user-project-name {
+#project-name {
   padding-bottom:10px;
 }
 
-#user-project-description {
+#project-description {
   height:100px;
   overflow:hidden;
   overflow-wrap: normal;
 }
 
-#user-project-col-footer {
+#project-col-footer {
   padding-top:55px;
 }
