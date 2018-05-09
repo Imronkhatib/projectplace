@@ -44,6 +44,30 @@
   opacity:50%;
 }
 
-#header-test-stuff {
+#project-stuff {
   padding-bottom:20px;
+}
+
+
+#user-project-header {
+  padding-bottom:20px;
+}
+
+#user-project-col {
+  height:440px;
+
+}
+
+#user-project-name {
+  padding-bottom:10px;
+}
+
+#user-project-description {
+  height:100px;
+  overflow:hidden;
+  overflow-wrap: normal;
+}
+
+#user-project-col-footer {
+  padding-top:55px;
 }

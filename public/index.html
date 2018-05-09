@@ -495,26 +495,28 @@
 							<li role="presentation"><a href="#two-column" aria-controls="two-column" role="tab" data-toggle="tab"><i class="fa fa-th-list" aria-hidden="true"></i></a></li>
 						</ul>				
 					</div> -->
-					<div id="header-test-stuff">
+					<div id="user-project-header">
 						<h2>Your Projects:</h2>
 					</div>
 					<div class="tab-content tr-job-posted">
 						<div role="tabpanel" class="tab-pane fade in active" id="four-colum">
 							<div class="row">
 								<div v-for="project in projects">
-									<div class="col-sm-6 col-md-3">
-										<div class="job-item">
+									<div class="col-sm-6 col-md-3" >
+										<div class="job-item" id="user-project-col" >
 											<div class="item-overlay">
-												<div class="job-info">
+												<div class="job-info" >
 													<a href="#" class="btn btn-primary">Full Time</a>
 													<span class="tr-title">
-														<a href="job-details.html">Project Manager</a>
-														<span><a href="#">Dig File</a></span>
-													</span>
+														<div id="user-project-name">
+														<a href="#">{{project.name}}</a>
+														</div>
+														<!-- <span><a href="#">Dig File</a></span> -->
+													<!-- </span> -->
 													<ul class="tr-list job-meta">
-														<li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li>
-														<li><i class="fa fa-briefcase" aria-hidden="true"></i>Mid Level</li>
-														<li><i class="fa fa-money" aria-hidden="true"></i>$5,000 - $6,000</li>
+														<!-- <li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li> -->
+														<!-- <li><i class="fa fa-briefcase" aria-hidden="true"></i>{{}}</li> -->
+														<li>{{project.description}}</li>
 													</ul>
 													<ul class="job-social tr-list">
 														<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
@@ -529,20 +531,27 @@
 													<img src="images/job/1.png" alt="images" class="img-responsive">
 												</div>
 												<span class="tr-title">
-													<a href="#">Project Manager</a>
-													<span><a href="#">Dig File</a></span>
+													<div id="user-project-name">
+														<a href="#">{{project.name}}</a>
+													</div>
+													<div id="user-project-description">
+														<span><a href="#">{{project.description}}</a></span>
+													</div>
 												</span>
 												<ul class="tr-list job-meta">
-													<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
+													
+												<div id="user-project-col-footer">
 													<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-													<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
+													<li><span><i class="fa fa-money" aria-hidden="true"></i></span>${{project.budget}}</li>
 												</ul>
-												<div class="time">
-											
-													<a href="#"><span></span></a>
-				
-													<span class="pull-right">Posted 23 hours ago</span>
-												</div>																				
+													<div class="time">
+												
+														<a href="#"><span></span></a>
+
+														<span class="pull-right">Posted 23 hours ago</span>
+													</div>																				
+													
+												</div>
 											</div>
 										</div>
 									</div>
