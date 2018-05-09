@@ -14,6 +14,18 @@ var HomePage = {
   computed: {}
 };
 
+var SuccesfulPostPage = {
+  template: "#successful-post-page",
+  data: function() {
+    return {
+      message: ""
+    };
+  },
+  created: function() {},
+  methods: {},
+  computed: {}
+};
+
 var ProjectShowPage = {
   template: "#project-show-page",
   data: function() {
@@ -99,7 +111,7 @@ var ProjectNewPage = {
       axios
         .post("/projects", params)
         .then(function(response) {
-          router.push("/projects");
+          router.push("/success");
         })
         .catch(
           function(error) {
@@ -110,11 +122,11 @@ var ProjectNewPage = {
   }
 };
 
-var UsersProjectsPage = {
-  template: "#users-projects-page",
+var UserProjectsPage = {
+  template: "#user-projects-page",
   data: function() {
     return {
-      projects: []
+      projects: [],
     };
   },
   created: function() {
@@ -230,10 +242,11 @@ var router = new VueRouter({
     { path: "/signup", component: SignupPage },
     { path: "/login", component: LoginPage },
     { path: "/profile/:id", component: ProfilePage },
-    { path: "/users-projects", component: UsersProjectsPage },
+    { path: "/user-projects", component: UserProjectsPage },
     { path: "/projects", component: ProjectsPage },
     { path: "/projects/new", component: ProjectNewPage },
-    { path: "/projects/:id", component: ProjectShowPage }
+    { path: "/projects/:id", component: ProjectShowPage },
+    { path: "/success", component: SuccesfulPostPage }
   ],
   scrollBehavior: function(to, from, savedPosition) {
     return { x: 0, y: 0 };
