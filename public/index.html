@@ -728,7 +728,7 @@
 													<li>{{project.description}}</li>
 												</ul>
 												<ul class="job-social arrow">
-													<li><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+													<li><a v-bind:href="'/#/projects/' + project.id"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
 												</ul>
 											</div>										
 										</div>
@@ -741,7 +741,7 @@
 													<a href="#">{{project.name}}</a>
 												</div>
 												<div id="project-description">
-													<span><a href="#">{{project.description}}</a></span>
+													<span><a>{{project.description}}</a></span>
 												</div>
 											</span>
 											<ul class="tr-list job-meta">		
@@ -767,111 +767,62 @@
 </template>
 
 <template id=projects-page>
-	<div>
 	<div class="vue-component">
-			<div class="vue-component">
-				<div class="jobs-listing section-padding">
-					<div class="container">
-						<!-- <div class="job-topbar">	
-							<ul class="nav nav-tabs job-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#four-colum" aria-controls="four-colum" role="tab" data-toggle="tab"><i class="fa fa-th" aria-hidden="true"></i></a></li>
-								<li role="presentation"><a href="#two-column" aria-controls="two-column" role="tab" data-toggle="tab"><i class="fa fa-th-list" aria-hidden="true"></i></a></li>
-							</ul>				
-						</div> -->
-					<div id="project-header">
-							<h2>All Projects:</h2>
-						</div>
-						<div class="tab-content tr-job-posted">
-							<div role="tabpanel" class="tab-pane fade in active" id="four-colum">
-								<div class="row">
-									<div v-for="project in projects">
-										<div class="col-sm-6 col-md-3" >
-											<div class="job-item" id="project-col" >
-												<div class="item-overlay">
-													<div class="job-info" >
-														<a href="#" class="btn btn-primary">Full Time</a>
-														<span class="tr-title">
-															<div id="project-name">
-															<a href="#">{{project.name}}</a>
-															</div>
-															<!-- <span><a href="#">Dig File</a></span> -->
-														<!-- </span> -->
-														<ul class="tr-list job-meta">
-															<!-- <li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li> -->
-															<!-- <li><i class="fa fa-briefcase" aria-hidden="true"></i>{{}}</li> -->
-															<li>{{project.description}}</li>
-														</ul>
-														<ul class="job-social tr-list">
-															<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-															<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-														</ul>
-													</div>										
-												</div>
-												<div class="job-info">
-													<div class="company-logo">
-														<img v-bind:src="project.image" alt="images" class="img-responsive">
+		<div class="jobs-listing section-padding">
+			<div class="container">
+				<div class="tab-content tr-job-posted">
+					<div role="tabpanel" class="tab-pane fade in active" id="four-colum">
+						<div class="row">
+							<div v-for="project in projects">
+								<div class="col-sm-6 col-md-3" >
+									<div class="job-item" id="project-col" >
+										<div class="item-overlay">
+											<div class="job-info" >
+												<span class="tr-title">
+													<div id="project-name">
+													<a>{{project.name}}</a>
 													</div>
-													<span class="tr-title">
-														<div id="project-name">
-															<a href="#">{{project.name}}</a>
-														</div>
-														<div id="project-description">
-															<span><a href="#">{{project.description}}</a></span>
-														</div>
-													</span>
-													<ul class="tr-list job-meta">
-														
-													<div id="project-col-footer">
-														<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-														<li><span><i class="fa fa-money" aria-hidden="true"></i></span>${{project.budget}}</li>
-													</ul>
-														<div class="time">
-													
-															<a href="#"><span></span></a>
-
-															<span class="pull-right">{{project.created_at}}</span>
-														</div>																				
-														
-													</div>
+												<ul class="tr-list job-meta">
+													<!-- <li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li> -->
+													<!-- <li><i class="fa fa-briefcase" aria-hidden="true"></i>{{}}</li> -->
+													<li>{{project.description}}</li>
+												</ul>
+												<ul class="job-social arrow">
+													<li><a v-bind:href="'/#/projects/' + project.id"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+												</ul>
+											</div>										
+										</div>
+										<div class="job-info">
+											<div class="company-logo">
+												<img v-bind:src="project.image" alt="images" class="img-responsive">
+											</div>
+											<span class="tr-title">
+												<div id="project-name">
+													<a href="#">{{project.name}}</a>
 												</div>
+												<div id="project-description">
+													<span><a>{{project.description}}</a></span>
+												</div>
+											</span>
+											<ul class="tr-list job-meta">		
+											<div id="project-col-footer">
+												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>${{project.budget}}</li>
+											</ul>
+												<div class="time">	
+													<a><span>{{project.project_type}}</span></a>
+													<span class="pull-right">{{project.created_at}}</span>
+												</div>																							
 											</div>
 										</div>
 									</div>
-								</div><!-- /.row -->										
-						</div><!-- /.tab-pane -->
-
-							<!-- <div role="tabpanel" class="tab-pane fade two-column" id="two-column">
-								<div class="row">
-									<div class="col-sm-6">
-										<div v-for="project in projects">
-											<div class="job-item">
-												<div class="job-info">
-													<div class="clearfix">
-														<div class="company-logo">
-															<img src="images/job/1.png" alt="images" class="img-responsive">
-														</div>
-														<span class="tr-title">
-															<a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-														</span>
-														<span><a href="#" class="btn btn-primary">Part Time</a></span>
-													</div>
-													<ul class="tr-list job-meta">
-														<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-														<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-														<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>	
-								</div> --><!-- /.row -->										
-							</div><!-- /.tab-pane -->
-						</div><!-- /.tab-content -->		
-					</div><!-- /.container -->		
-				</div><!-- /.jobs-listing -->
-	</div>
+								</div>
+							</div>
+						</div><!-- /.row -->										
+					</div><!-- /.tab-pane -->
+				</div><!-- /.tab-content -->		
+			</div><!-- /.container -->		
+		</div><!-- /.jobs-listing -->
 	</div>	
 </template>
 
@@ -908,8 +859,8 @@
 										<div>
 											<select v-model="projectType" id="project-dropdown-box">
 												  <option disabled value="">Please select one</option>
-												  <option>Web Development</option>
-												  <option>Video Game Development</option>
+												  <option>Web Dev</option>
+												  <option>Video Game Dev</option>
 												  <option>Creative Projects</option>
 												  <option>Animation</option>
 											</select>
@@ -1010,7 +961,10 @@
 									</div>
 									<span class="characters-left">5000 Characters left</span>
 								</div>
-							</div><!-- /.row -->					
+							</div><!-- /.row -->
+
+							
+
 						</div><!-- /.job-description -->
 						<div class="section agreement">
 							<label for="send">

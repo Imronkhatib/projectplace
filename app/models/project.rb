@@ -19,7 +19,7 @@ class Project < ApplicationRecord
       minimum_requirements: minimum_requirements,
       budget:budget,
       image: image,
-      created_at: created_at.strftime("%-d day(s) ago"),
+      created_at: created_at.strftime("%d/%m/%y"),
       id: id
     }
   end
