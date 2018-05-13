@@ -18,7 +18,11 @@ class Project < ApplicationRecord
       key_responsibilities: key_responsibilities,
       minimum_requirements: minimum_requirements,
       budget:budget,
+      image: image,
+      created_at: created_at.strftime("%-d day(s) ago"),
       id: id
     }
   end
+
+
 end

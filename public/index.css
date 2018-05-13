@@ -21,7 +21,8 @@
   padding:14px 14px 250px 14px;
   background-color: rgb(250, 247, 250);
   border: 1px solid rgb(232, 230, 232);
-  border-radius: 4px; 
+  border-radius: 4px;
+  
 }
 
 #project-dropdown-box
@@ -70,4 +71,33 @@
 
 #project-col-footer {
   padding-top:55px;
+}
+
+
+
+#post-header {
+  background-color:#008def;
+  margin:50px auto -30px auto ;
+  width:1140px;
+  text-align:center;
+  padding:50px;
+}
+
+#post-header h2 {
+  color:white;
+}
+
+#post-header h4 {
+  color:white;
+}
+
+#post-header p {
+  color:white;
+}
+
+.arrow {
+  float:right;
+  margin-top:50px;
+  padding:0;
+  list-style:none;
 }

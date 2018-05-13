@@ -26,4 +26,6 @@
 # end
 
 
+Project.update_all(image:"images/logo.png")
+
 

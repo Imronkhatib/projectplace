@@ -30,6 +30,7 @@ class ProjectsController < ApplicationController
         key_responsibilities: params[:key_responsibilities],
         minimum_requirements: params[:minimum_requirements],
         budget: params[:budget],
+        image: params[:image],
         admin_id: current_user.id
       )
 

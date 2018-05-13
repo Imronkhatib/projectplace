@@ -57,7 +57,7 @@
 					<div class="navbar-left">
 						<div class="collapse navbar-collapse" id="navbar-collapse">
 							<ul class="nav navbar-nav">
-								<li><a href="#">Profile Page</a></li>
+								<li><a href="/#/profile/:id">Profile Page</a></li>
 				        <li><a href="#"></a></li> <!-- profile settings -->
 								<li class="tr-dropdown"><a href="#">Projects</a>
 									<ul class="tr-dropdown-menu tr-list fadeInUp" role="menu">
@@ -199,6 +199,227 @@
   </body>
 </html>	
 
+
+<template id="profile-page">
+	<div>
+		<div class="tr-breadcrumb bg-image section-before">
+				<div class="container">
+					<div class="breadcrumb-info text-center">
+						<div class="user-image">
+							<img src="images/others/author.png" alt="Image" class="img-responsive">
+						</div>
+						<div class="user-title">
+							<h1>Jhon Doe</h1>
+						</div>		
+						<ul class="job-meta tr-list list-inline">
+							<li><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US</li>
+							<li><i class="fa fa-phone" aria-hidden="true"></i>+0123 456 789</li>
+							<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">jhondoe@gmail.com</a></li>
+							<li><i class="fa fa-briefcase" aria-hidden="true"></i>UI & UX Designer</li>
+						</ul>
+						<ul class="breadcrumb-social social-icon-bg  tr-list">
+							<li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i> <span>Twitter</span> </a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i> <span>Google Plus</span> </a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i><span>Linkedin</span> </a></li>
+							<li><a href="#"><i class="fa fa-dribbble"></i> <span>Dribbble</span></a></li>
+							<li><a href="#"><i class="fa fa-behance"></i> <span>Behance</span></a></li>
+							<li><a href="#"><i class="fa fa-globe"></i> <span>Website</span> </a></li>
+						</ul>			
+					</div>
+				</div><!-- /.container -->
+		</div><!-- /.tr-breadcrumb -->	
+		<div class="all-view section-padding">
+			<div class="container">
+				<div class="section">
+					<ul class="tr-list resume-info">
+						<li class="career-objective">
+							<div class="icon">
+						        <i class="fa fa-black-tie" aria-hidden="true"></i>
+						    </div>  
+						    <div class="media-body">
+						    	<span class="tr-title">Career Objective</span>
+						        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <br>
+						        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni।</p>
+						    </div>
+						</li><!-- /.career-objective -->
+						<li class="work-history">
+						    <div class="icon">
+						    	<i class="fa fa-briefcase" aria-hidden="true"></i>
+						    </div>
+						    <div class="media-body">
+						    	<span class="tr-title">Work History</span>
+						    	<ul class="tr-list">
+						    		<li>
+						    			<span>Senior Graphic Designer @ Buildomo</span>
+						    			<span class="present">2017 - Present</span>
+						    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						    		</li>
+						    		<li>
+						    			<span>Former Graphic Designer @ Ideame</span>
+						    			<span class="present">2015 - 2016</span>
+						    			<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						    		</li>
+						    		<li>
+						    			<span>Head of Design @ Titan Compnay</span>
+						    			<span class="present">2007 - 2015</span>
+						    			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+						    		</li>
+						    		<li>
+						    			<span>Graphic Designer @ Precision</span>
+						    			<span class="present">2005 - 2007</span>
+						    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						    		</li>
+						    		<li>
+						    			<span>Graphic Designer (Intern) @ Costa Rica Fruit Compnay</span>
+						    			<span class="present">2003 - 2005</span>
+						    			<p>Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						    		</li>
+						    	</ul>
+						    </div>
+						</li><!-- /.work-history -->	
+						<li class="education-background">
+						    <div class="icon">
+						    	<i class="fa fa-briefcase" aria-hidden="true"></i>
+						    </div>
+						    <div class="media-body">
+						    	<span class="tr-title">Education Background</span>
+						    	<ul class="tr-list">
+						    		<li>
+						    			<span>Senior Graphic Designer @ Buildomo</span>
+						    			<ul class="tr-list">
+						    				<li>Year: 1999 - 2001</li>
+						    				<li>Major: Major in Accounting</li>
+						    				<li>Course Duration: 2 Years</li>
+						    				<li>Result: 4.00</li>
+						    			</ul>
+						    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						    		</li>
+						    		<li>
+						    			<span>Bachalor of Arts @ Universty of Bristol</span>
+						    			<ul class="tr-list">
+						    				<li>Year: 1999 - 2001</li>
+						    				<li>Major: Major in Accounting</li>
+						    				<li>Course Duration: 2 Years</li>
+						    				<li>Result: 4.00</li>
+						    			</ul>
+						    			<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						    		</li>
+						    		<li>
+						    			<span>Diploma in Graphics Design @ Cincinnati Christian University</span>
+						    			<ul class="tr-list">
+						    				<li>Year: 1999 - 2001</li>
+						    				<li>Major: Major in Accounting</li>
+						    				<li>Course Duration: 2 Years</li>
+						    				<li>Result: 4.00</li>
+						    			</ul>
+						    			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+						    		</li>
+						    	</ul>
+						    </div>
+						</li><!-- /.education-background -->
+						<li class="qualification">
+						    <div class="icon">
+						    	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+						    </div>
+						    <div class="media-body">
+						    	<span class="tr-title">Special Qualification:</span>
+						    	<ol>
+									<li>5 years+ experience designing and building products In the Design & IT industry.</li>
+									<li>Passion for people-centered design, solid intuition.</li>
+									<li>Skilled at any Kind Design Tools. </li>
+									<li>Hard Worker & Quick Lerner.</li>
+						    	</ol>
+						    </div>
+						</li><!-- /.qualification -->
+						<li class="language-proficiency">
+						    <div class="icon">
+						    	<i class="fa fa-language" aria-hidden="true"></i>
+						    </div>
+						    <div class="media-body">
+						    	<span class="tr-title">Language Proficiency:</span>
+								<ul class="tr-list">
+								    <li>
+								        <span>English</span>
+								        <ul class="tr-list rating">
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+								        </ul>
+								    </li>
+								    <li>
+								        <span>German</span>
+								        <ul class="tr-list rating">
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+								        </ul>
+								    </li>
+								    <li>
+								        <span>Spanish</span>
+								        <ul class="tr-list rating">
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								        </ul>
+								    </li>
+								    <li>
+								        <span>Latin</span>
+								        <ul class="tr-list rating">
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+								            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+								        </ul>
+								    </li>
+								</ul>							    	
+						    </div>
+						</li><!-- /.language-proficiency -->	
+						<li class="personal-deatils">
+						    <div class="icon">
+						    	<i class="fa fa-user-secret" aria-hidden="true"></i>
+						    </div>
+						    <div class="media-body">
+						    	<span class="tr-title">Personal Deatils</span>
+								<ul class="tr-list">
+									<li><span class="left">Full Name</span><span class="middle">:</span> <span class="right">Jhon Doe</span></li>
+									<li><span class="left">Father's Name </span><span class="middle">:</span> <span class="right">Robert Doe</span></li>
+									<li><span class="left">Mother's Name</span><span class="middle">:</span> <span class="right">Ismatic Roderos Doe</span></li>
+									<li><span class="left">Date of Birth</span><span class="middle">:</span> <span class="right">26/01/1982</span></li>
+									<li><span class="left">Birth Place</span><span class="middle">:</span> <span class="right">United State of America</span></li>
+									<li><span class="left">Nationality</span><span class="middle">:</span> <span class="right">Canadian</span></li>
+									<li><span class="left">Sex</span><span class="middle">:</span> <span class="right">Male</span> </li>
+									<li><span class="left">Address</span><span class="middle">:</span> <span class="right">121 King Street, Melbourne Victoria, 1200 USA</span></li>
+								</ul>							    	
+						    </div>
+						</li><!-- /.personal-deatils -->
+						<li class="personal-deatils">
+						    <div class="icon">
+						    	<i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+						    </div>
+						    <div class="media-body">
+						    	<span class="tr-title">Declaration</span>
+						    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <br>
+						    	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni। dolores eos qui ratione voluptatem sequi nesciunt. </p>
+						    </div>
+						</li><!-- /.personal-deatils -->							
+					</ul>
+					<div class="buttons pull-right">
+						<a href="#" class="btn button-send"><i class="fa fa-envelope-o" aria-hidden="true"></i>Send Email</a>
+						<a href="#" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i>Download Resume as doc</a>
+					</div>					
+				</div>
+			</div>	
+		</div>
+	</div>
+</template>
 
 
 
@@ -487,107 +708,61 @@
 
 <template id=user-projects-page>
 	<div class="vue-component">
-				<div class="jobs-listing section-padding">
-					<div class="container">
-						<!-- <div class="job-topbar">	
-							<ul class="nav nav-tabs job-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#four-colum" aria-controls="four-colum" role="tab" data-toggle="tab"><i class="fa fa-th" aria-hidden="true"></i></a></li>
-								<li role="presentation"><a href="#two-column" aria-controls="two-column" role="tab" data-toggle="tab"><i class="fa fa-th-list" aria-hidden="true"></i></a></li>
-							</ul>				
-						</div> -->
-					<div id="project-header">
-							<h2>Your Projects:</h2>
-						</div>
-						<div class="tab-content tr-job-posted">
-							<div role="tabpanel" class="tab-pane fade in active" id="four-colum">
-								<div class="row">
-									<div v-for="project in projects">
-										<div class="col-sm-6 col-md-3" >
-											<div class="job-item" id="project-col" >
-												<div class="item-overlay">
-													<div class="job-info" >
-														<a href="#" class="btn btn-primary">Full Time</a>
-														<span class="tr-title">
-															<div id="project-name">
-															<a href="#">{{project.name}}</a>
-															</div>
-															<!-- <span><a href="#">Dig File</a></span> -->
-														<!-- </span> -->
-														<ul class="tr-list job-meta">
-															<!-- <li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li> -->
-															<!-- <li><i class="fa fa-briefcase" aria-hidden="true"></i>{{}}</li> -->
-															<li>{{project.description}}</li>
-														</ul>
-														<ul class="job-social tr-list">
-															<li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a></li>
-															<li><a href="job-details.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-														</ul>
-													</div>										
-												</div>
-												<div class="job-info">
-													<div class="company-logo">
-														<img src="images/job/1.png" alt="images" class="img-responsive">
+		<div class="jobs-listing section-padding">
+			<div class="container">
+				<div class="tab-content tr-job-posted">
+					<div role="tabpanel" class="tab-pane fade in active" id="four-colum">
+						<div class="row">
+							<div v-for="project in projects">
+								<div class="col-sm-6 col-md-3" >
+									<div class="job-item" id="project-col" >
+										<div class="item-overlay">
+											<div class="job-info" >
+												<span class="tr-title">
+													<div id="project-name">
+													<a>{{project.name}}</a>
 													</div>
-													<span class="tr-title">
-														<div id="project-name">
-															<a href="#">{{project.name}}</a>
-														</div>
-														<div id="project-description">
-															<span><a href="#">{{project.description}}</a></span>
-														</div>
-													</span>
-													<ul class="tr-list job-meta">
-														
-													<div id="project-col-footer">
-														<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-														<li><span><i class="fa fa-money" aria-hidden="true"></i></span>${{project.budget}}</li>
-													</ul>
-														<div class="time">
-													
-															<a href="#"><span></span></a>
-
-															<span class="pull-right">Posted 23 hours ago</span>
-														</div>																				
-														
-													</div>
+												<ul class="tr-list job-meta">
+													<!-- <li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li> -->
+													<!-- <li><i class="fa fa-briefcase" aria-hidden="true"></i>{{}}</li> -->
+													<li>{{project.description}}</li>
+												</ul>
+												<ul class="job-social arrow">
+													<li><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+												</ul>
+											</div>										
+										</div>
+										<div class="job-info">
+											<div class="company-logo">
+												<img v-bind:src="project.image" alt="images" class="img-responsive">
+											</div>
+											<span class="tr-title">
+												<div id="project-name">
+													<a href="#">{{project.name}}</a>
 												</div>
+												<div id="project-description">
+													<span><a href="#">{{project.description}}</a></span>
+												</div>
+											</span>
+											<ul class="tr-list job-meta">		
+											<div id="project-col-footer">
+												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
+												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>${{project.budget}}</li>
+											</ul>
+												<div class="time">	
+													<a><span>{{project.project_type}}</span></a>
+													<span class="pull-right">{{project.created_at}}</span>
+												</div>																							
 											</div>
 										</div>
 									</div>
-								</div><!-- /.row -->										
-						</div><!-- /.tab-pane -->
-
-							<!-- <div role="tabpanel" class="tab-pane fade two-column" id="two-column">
-								<div class="row">
-									<div class="col-sm-6">
-										<div v-for="project in projects">
-											<div class="job-item">
-												<div class="job-info">
-													<div class="clearfix">
-														<div class="company-logo">
-															<img src="images/job/1.png" alt="images" class="img-responsive">
-														</div>
-														<span class="tr-title">
-															<a href="job-details.html">Design Associate</a><span><a href="#">Loop</a></span>
-														</span>
-														<span><a href="#" class="btn btn-primary">Part Time</a></span>
-													</div>
-													<ul class="tr-list job-meta">
-														<li><span><i class="fa fa-map-signs" aria-hidden="true"></i></span>San Francisco, CA, US</li>
-														<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
-														<li><span><i class="fa fa-money" aria-hidden="true"></i></span>$5,000 - $6,000</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>	
-								</div> --><!-- /.row -->										
-							</div><!-- /.tab-pane -->
-						</div><!-- /.tab-content -->		
-					</div><!-- /.container -->		
-				</div><!-- /.jobs-listing -->
+								</div>
+							</div>
+						</div><!-- /.row -->										
+					</div><!-- /.tab-pane -->
+				</div><!-- /.tab-content -->		
+			</div><!-- /.container -->		
+		</div><!-- /.jobs-listing -->
 	</div>
 </template>
 
@@ -636,7 +811,7 @@
 												</div>
 												<div class="job-info">
 													<div class="company-logo">
-														<img src="images/job/1.png" alt="images" class="img-responsive">
+														<img v-bind:src="project.image" alt="images" class="img-responsive">
 													</div>
 													<span class="tr-title">
 														<div id="project-name">
@@ -656,7 +831,7 @@
 													
 															<a href="#"><span></span></a>
 
-															<span class="pull-right">Posted 23 hours ago</span>
+															<span class="pull-right">{{project.created_at}}</span>
 														</div>																				
 														
 													</div>
@@ -701,21 +876,13 @@
 </template>
 
 	
-<template id=projects-new-page>
+<template id="projects-new-page">
 	<div>
-		<div class="tr-breadcrumb bg-image section-before">
-			<div class="container">
-				<div class="breadcrumb-info text-center">
-					<div class="page-title">
-						<h1>Post Your Job</h1>
-					</div>		
-					<ol class="breadcrumb">
-						<li><a href="/#/">Home</a></li>
-						<li class="active">Poject Posting</li>
-					</ol>			
-				</div>
-			</div><!-- /.container -->
-		</div><!-- /.tr-breadcrumb -->
+		<div id="post-header">
+			<h2>Find Others To Collaborate With!</h2>
+			<h4>Have a great Idea but need help?</h4>
+			<p>Other members of Projectplace.io will be able to apply to join your project once it's posted</p>
+		</div>
 		<div class="tr-post-job page-content">
 			<div class="container">
 				<div class="row">
@@ -741,9 +908,10 @@
 										<div>
 											<select v-model="projectType" id="project-dropdown-box">
 												  <option disabled value="">Please select one</option>
-												  <option>A</option>
-												  <option>B</option>
-												  <option>C</option>
+												  <option>Web Development</option>
+												  <option>Video Game Development</option>
+												  <option>Creative Projects</option>
+												  <option>Animation</option>
 											</select>
 										</div><!-- /.dropdown --><!-- /.dropdown -->
 									</div>
@@ -774,7 +942,7 @@
 									</div>
 									<div class="col-sm-9">
 										<div class="calendar">
-										    <input type="date" class="form-control" value="2017-06-25" v-model="endDate" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
+										    <input type="text" class="form-control" v-model="endDate" placeholder="mm/dd/yyyy">
 										</div>								
 									</div>
 								</div><!-- /.row -->		
@@ -816,7 +984,7 @@
 								</div>
 								<div class="col-sm-9">
 									<div>
-										<input type="text" placeholder="Write a summary about your project." id="project-box-large" v-model="description">
+										<textarea rows="4" cols="50" placeholder="Write a summary about your project." id="project-box-large" v-model="description"></textarea>
 									</div>
 									<span class="characters-left">5000 Characters left</span>
 								</div>
@@ -827,7 +995,7 @@
 								</div>
 								<div class="col-sm-9">
 									<div>
-										<input type="text" placeholder="What do you need help with on your project?" id="project-box-large" v-model="keyResponsibilities">
+										<textarea rows="4" cols="50" placeholder="What do you need help with on your project?" id="project-box-large" v-model="keyResponsibilities"></textarea>
 									</div>
 									<span class="characters-left">5000 Characters left</span>
 								</div>
@@ -838,7 +1006,7 @@
 								</div>
 								<div class="col-sm-9">
 									<div>
-										<input type="text" placeholder="What does a good candidate need to be able to do?" id="project-box-large" v-model="minimumRequirements">
+										<textarea rows="4" cols="50" placeholder="What does a good candidate need to be able to do?" id="project-box-large" v-model="minimumRequirements"></textarea>
 									</div>
 									<span class="characters-left">5000 Characters left</span>
 								</div>
