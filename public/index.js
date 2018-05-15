@@ -161,8 +161,7 @@ var ProfilePage = {
   },
   methods: {},
   computed: {}
-};
-  
+};  
 
 var LoginPage = {
   template: "#login-page",

@@ -96,8 +96,9 @@
 						</div> --><!-- /.language-dropdown -->					
 						<ul class="sign-in tr-list">
 							<li><i class="fa fa-user"></i></li>
-							<li><a href="/#/login">Sign In </a></li>
-							<li><a href="/#/signup">Register</a></li>
+							<li><a href="/#/login">Sign In/ </a></li>
+							<!-- <li><a href="/#/signup">Register</a></li> -->
+							<a href="/#/signup">Register</a>
 						</ul><!-- /.sign-in -->					
 
 						<a href="/#/projects/new" class="btn btn-primary">Post Project</a>
@@ -433,7 +434,7 @@
 					</div>
 					<h1>Congratulations!</h1>
 					<p>Your Project has been posted.</p>
-					<a href="/#/users-projects" class="btn btn-primary">Back to projects</a>
+					<a href="/#/user-projects" class="btn btn-primary">Back to projects</a>
 				</div><!-- /.tr-notification -->
 			</div><!-- /.container -->
 		</div> <!-- /.page-contant -->
@@ -714,34 +715,22 @@
 					<div role="tabpanel" class="tab-pane fade in active" id="four-colum">
 						<div class="row">
 							<div v-for="project in projects">
-								<div class="col-sm-6 col-md-3" >
+								<div>
 									<div class="job-item" id="project-col" >
-										<div class="item-overlay">
-											<div class="job-info" >
-												<span class="tr-title">
-													<div id="project-name">
-													<a>{{project.name}}</a>
-													</div>
-												<ul class="tr-list job-meta">
-													<!-- <li><i class="fa fa-map-signs" aria-hidden="true"></i>San Francisco, CA, US</li> -->
-													<!-- <li><i class="fa fa-briefcase" aria-hidden="true"></i>{{}}</li> -->
-													<li>{{project.description}}</li>
-												</ul>
-												<ul class="job-social arrow">
-													<li><a v-bind:href="'/#/projects/' + project.id"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-												</ul>
-											</div>										
-										</div>
+										
 										<div class="job-info">
 											<div class="company-logo">
 												<img v-bind:src="project.image" alt="images" class="img-responsive">
+												<a class="view-button" v-bind:href="'/#/projects/' + project.id">View Project</a>
 											</div>
 											<span class="tr-title">
 												<div id="project-name">
 													<a href="#">{{project.name}}</a>
 												</div>
-												<div id="project-description">
-													<span><a>{{project.description}}</a></span>
+												<div id="user-project-description">
+													<span><p>{{project.description}}</p></span>
+													<span><p>{{project.key_responsibilities}}</p></span>
+													<span><p>{{project.minimum_requirements}}</p></span>
 												</div>
 											</span>
 											<ul class="tr-list job-meta">		
@@ -749,9 +738,9 @@
 												<li><span><i class="fa fa-briefcase" aria-hidden="true"></i></span>Mid Level</li>
 												<li><span><i class="fa fa-money" aria-hidden="true"></i></span>${{project.budget}}</li>
 											</ul>
-												<div class="time">	
+												<div class="project-footer">	
 													<a><span>{{project.project_type}}</span></a>
-													<span class="pull-right">{{project.created_at}}</span>
+													<span class="pull-right" id="created-at">{{project.created_at}}</span>
 												</div>																							
 											</div>
 										</div>
@@ -996,66 +985,48 @@
 
 
 <template id="signup-page">
-	<div>
-			<div class="tr-breadcrumb bg-image section-before">
-		<div class="container">
-			<div class="breadcrumb-info text-center">
-				<div class="page-title">
-					<h1>Create a New Account</h1>
-					<span>Lorem Ipsum is simply dummy text of the printing pesetting.</span>
-				</div>				
-			</div>
-		</div><!-- /.container -->
-	</div><!-- tr-breadcrumb -->	
+	<div class="sign-up">
+		<div class="sign-in-modal">
 
-	<div class="tr-account section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-md-offset-4">
-					<div class="user-account">
-						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane active" id="seeker">
-								<div class="account-content">
-									<form action="#" class="tr-form">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Full Name" v-model="name">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Username" v-model="userName">
-										</div>
-										<div class="form-group">
-											<input type="email" class="form-control" placeholder="your Email" v-model="email">
-										</div>
-										<div class="form-group">
-											<input type="password" class="form-control" placeholder="Password" v-model="password">
-										</div>
-										<div class="form-group">
-											<input type="password" class="form-control" placeholder="Confirm Password" v-model="passwordConfirmation" >
-										</div>	
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Skills" v-model="skills" v-on:keyup.enter="submit()">
-										</div>
-										<!-- <div class="dropdown tr-change-dropdown" >
-											<a data-toggle="dropdown" href="#" aria-expanded="false"><span class="change-text" v-model="skills">Skill</span><i class="fa fa-angle-down"></i></a>
-											<ul class="dropdown-menu tr-change">
-												<li><a href="#">Ruby</a></li>
-												<li><a href="#">C#</a></li>
-											</ul>								
-										</div> --><!-- /.category-change -->
-										<button type="submit" class="btn btn-primary" v-on:click="submit()">Sign Up</button>
-									</form>	
-									<div class="new-user text-center">
-										<span>Already Registered? <a href="signin.html">Sign in</a> </span>
+			<div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		    	<div>
+		    		<div class="errors">
+			    		<div class="row">
+								<div class="col-sm-3">
+									<div v-for="error in errors">
+										<span>{{error}}</span>
 									</div>
 								</div>
 							</div>
-						</div>				
-					</div>			
-				</div>
-			</div><!-- /.row -->			
-		</div><!-- container -->
-	</div><!-- /.tr-account-->	
-
+		    		</div>
+			     <div class="account-content">
+		          <div class="form-group">
+		            <input type="text" class="form-control" placeholder="Full Name" v-model="name">
+		          </div>
+		          <div class="form-group">
+		            <input type="text" class="form-control" placeholder="Username" v-model="userName">
+		          </div>
+		          <div class="form-group">
+		            <input type="email" class="form-control" placeholder="your Email" v-model="email">
+		          </div>
+		          <div class="form-group">
+		            <input type="password" class="form-control" placeholder="Password" v-model="password">
+		          </div>
+		          <div class="form-group">
+		            <input type="password" class="form-control" placeholder="Confirm Password" v-model="passwordConfirmation" >
+		          </div>  
+		          <div class="form-group">
+		            <input type="text" class="form-control" placeholder="Skills" v-model="skills" v-on:keyup.enter="submit()">
+		          </div>
+		          <button type="submit" class="btn btn-primary" v-on:click="submit()">Sign Up</button>  
+			        <div class="new-user text-center">
+			          <span>Already Registered? <a href="/#/login">Sign in</a> </span>
+			        </div>
+			     </div>
+		      </div>
+		  </div>
+		</div>
 	</div>
 </template>
 
@@ -1080,10 +1051,11 @@
 							<div class="account-content">
 								<form action="#" class="tr-form">
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Please Enter Your Email" v-model="email" required>
+										
+										<input type="email" class="form-control" placeholder="Please Enter Your Email" v-model="email">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Password" v-model="password" v-on:keyup.enter="submit()" required>
+										<input type="password" class="form-control" placeholder="Password" v-model="password" v-on:keyup.enter="submit()">
 									</div>
 									<div class="user-option">
 										<div class="checkbox">

@@ -24,7 +24,7 @@ class UsersController < ApplicationController
       UserSkill.create!(user_id:user.id, skill_id:skill.id)
       render json: {message: 'User created successfully'}, status: :created
     else
-      render json: {errors: user.errors.full_messages}, status: :bad_request
+      render json: {errors: user.errors.full_messages}, status: :unprocessible_entity
     end
   end
  

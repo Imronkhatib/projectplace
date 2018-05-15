@@ -69,6 +69,11 @@
   overflow-wrap: normal;
 }
 
+#user-project-description {
+  height:100px;
+  overflow-wrap: normal;
+}
+
 #project-col-footer {
   padding-top:55px;
 }
@@ -103,3 +108,59 @@
 }
 
 
+
+.project-footer a{
+  color: #fff;
+  background-color: #f1592a;
+  border-color: #f1592a;
+  padding: 5px 10px;
+  border-radius: 4px;
+  line-height: 10px;
+  font-size: 12px;
+}
+
+.project-footer #created-at{
+  color:#bebebe;
+}
+
+.view-button {
+  color: #fff;
+  font-size: 12px;
+  float:right;
+  text-transform: uppercase;
+  background-color: #008def;
+  border-color: #008def;
+  border-radius: 30px;  
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 8px 20px 5px;
+  margin:-30px 10px;
+}
+
+
+.viewt-button:hover {
+  color:#008def;
+  font-size: 12px;
+  float:right;
+  text-transform:uppercase;
+  background-color:white;
+  border-color: #008def;
+   
+}
+
+.sign-up {
+  
+  background-color:black;
+  opacity:0.75;
+}
+
+.sign-in-modal {
+  position:relative;
+  padding:200px;
+}
+
+
+.errors {
+ text-align:center;
+}
