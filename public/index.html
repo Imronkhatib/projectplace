@@ -987,20 +987,13 @@
 <template id="signup-page">
 	<div class="sign-up">
 		<div class="sign-in-modal">
-
 			<div class="modal-dialog modal-lg">
 		    <div class="modal-content">
 		    	<div>
-		    		<div class="errors">
-			    		<div class="row">
-								<div class="col-sm-3">
-									<div v-for="error in errors">
-										<span>{{error}}</span>
-									</div>
-								</div>
-							</div>
-		    		</div>
 			     <div class="account-content">
+				     	<div class="alert alert-danger" role="alert" v-for="error in errors">
+								{{error}}
+							</div>
 		          <div class="form-group">
 		            <input type="text" class="form-control" placeholder="Full Name" v-model="name">
 		          </div>
